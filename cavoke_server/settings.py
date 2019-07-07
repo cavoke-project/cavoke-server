@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cavoke.apps.CavokeConfig',
+    'cavoke_app.apps.CavokeConfig',
     'rest_framework',
+    'drf_firebase_auth'
 ]
 
 MIDDLEWARE = [
