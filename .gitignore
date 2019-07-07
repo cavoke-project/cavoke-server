@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 
 secret_settings.py
+cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json
