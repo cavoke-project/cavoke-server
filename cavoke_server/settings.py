@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cavoke_app.apps.CavokeConfig',
     'rest_framework',
-    'drf_firebase_auth'
+    'drf_firebase_auth',
+    'cavoke'
 ]
 
 MIDDLEWARE = [
