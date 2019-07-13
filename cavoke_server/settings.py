@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+
 from .secret_settings import SECRET_KEY
+# from cavoke_server import tasks
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_firebase_auth',
     'cavoke',
-    'logentry_admin'
+    'logentry_admin',
+    'celery'
 ]
 
 MIDDLEWARE = [

@@ -12,6 +12,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='gamesession',
-            options={'ordering': ('created', 'player_uid', 'game_type_id', 'game_session_id')},
+            options={'ordering': ('createdOn', 'player_uid', 'game_type_id', 'game_session_id')},
         ),
     ]

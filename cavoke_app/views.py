@@ -1,3 +1,5 @@
+import logging
+
 from django.http import HttpResponse
 
 from rest_framework import generics
@@ -22,6 +24,7 @@ def error_response(message: str, error_code):
 def ok_response(answer: dict):
     return Response({"status": "OK", "response": answer}, HTTP_200_OK)
 
+
 @csrf_exempt
 @api_view(["GET"])
 @authentication_classes(())
@@ -35,10 +38,14 @@ def newGame(request):
     uid = request.auth['uid']
     data = request.query_params
     try:
-        game_type_id = str(data['game_type_id'][0])
+        game_type_id = str(data['game_type_id'])
     except KeyError:
-        return error_response("Wrong params", HTTP_400_BAD_REQUEST)
+        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
 
     gs = GameSession(game_type_id=game_type_id, player_uid=uid)
-    gs.save()
+    try:
+        gs.save()
+    except ValueError as e:
+        return error_response(str(e), HTTP_400_BAD_REQUEST)
+    logging.INFO("New Game Session started by " + uid)
     return ok_response({'gameId': gs.game_session_id})

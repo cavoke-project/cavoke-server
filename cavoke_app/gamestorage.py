@@ -1,4 +1,8 @@
-from typing import Dict
-from cavoke import *
+from typing import Dict, Tuple, Any
+from threading import Lock
 
-game_dict: Dict[Game, str] = {}
+from cavoke import Game
+
+
+game_type_dict: Dict[str, Any] = {}
+game_session_dict: Dict[str, Tuple[Game, Lock]] = {}

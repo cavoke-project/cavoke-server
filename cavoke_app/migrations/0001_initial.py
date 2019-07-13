@@ -18,10 +18,10 @@ class Migration(migrations.Migration):
                 ('game_session_id', models.CharField(max_length=100)),
                 ('player_uid', models.CharField(max_length=100)),
                 ('game_type_id', models.CharField(max_length=100)),
-                ('created', models.DateTimeField(auto_now_add=True)),
+                ('createdOn', models.DateTimeField(auto_now_add=True)),
             ],
             options={
-                'ordering': ('created', 'player_uid', 'game_type_id'),
+                'ordering': ('createdOn', 'player_uid', 'game_type_id'),
             },
         ),
     ]
