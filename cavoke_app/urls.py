@@ -1,4 +1,4 @@
-"""cavoke_server URL Configuration
+"""cavoke_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -14,14 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
-from django.contrib import admin
-from cavoke_server import views
+from cavoke_app import views
+
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('admin/', admin.site.urls),
-    path('v1/', include('cavoke_app.urls')),
-    path('', views.index)
+    path('health/', views.health),
+    path('newGame/', views.newGame)
 ]

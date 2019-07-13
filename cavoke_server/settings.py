@@ -25,8 +25,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-SECURE_SSL_REDIRECT = True
-
 ALLOWED_HOSTS = []
 
 
@@ -42,7 +40,8 @@ INSTALLED_APPS = [
     'cavoke_app.apps.CavokeConfig',
     'rest_framework',
     'drf_firebase_auth',
-    'cavoke'
+    'cavoke',
+    'logentry_admin'
 ]
 
 MIDDLEWARE = [
@@ -130,11 +129,13 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
         'drf_firebase_auth.authentication.FirebaseAuthentication',
     )
 }
 
 DRF_FIREBASE_AUTH = {
-    'FIREBASE_SERVICE_ACCOUNT_KEY': 'cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json',
+    'FIREBASE_SERVICE_ACCOUNT_KEY': 'cavoke_server/cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json',
+    'ALLOW_ANONYMOUS_REQUESTS': True,
+    'FIREBASE_ATTEMPT_CREATE_WITH_DISPLAY_NAME': False
 }

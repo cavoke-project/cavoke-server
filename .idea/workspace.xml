@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad633672-21f5-4709-8705-38c0a1305709" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cavoke_app/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/migrations/0002_auto_20190713_1637.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/migrations/0003_profile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_server/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_app/gamestorage.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/gamestorage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_server/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_server/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_server/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +42,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cavoke_server/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
+            <state relative-caret-position="425">
+              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <folding>
+                <element signature="e#637#674#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cavoke_app/gamestorage.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cavoke_app/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="357">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#634#671#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cavoke_server/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+            <state relative-caret-position="557">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
               <folding>
                 <element signature="e#314#323#0" expanded="true" />
               </folding>
@@ -66,10 +79,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cavoke_app/apps.py">
+        <entry file="file://$PROJECT_DIR$/cavoke_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="238">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -77,29 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cavoke_server/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#637#669#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cavoke_server/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="102">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -113,8 +105,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>anon</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response13.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -122,12 +122,22 @@
         <option value="$PROJECT_DIR$/cavoke_server/secret_settings.py" />
         <option value="$PROJECT_DIR$/django.wsgi" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/cavoke_server/urls.py" />
         <option value="$PROJECT_DIR$/cavoke/views.py" />
         <option value="$PROJECT_DIR$/cavoke_app/apps.py" />
+        <option value="$PROJECT_DIR$/cavoke_app/gamestorage.py" />
+        <option value="$PROJECT_DIR$/cavoke_server/models.py" />
+        <option value="$PROJECT_DIR$/cavoke_app/admin.py" />
+        <option value="$PROJECT_DIR$/cavoke_app/view.py" />
+        <option value="$PROJECT_DIR$/cavoke_app/serializers.py" />
+        <option value="$PROJECT_DIR$/cavoke_server/views.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" />
+        <option value="$PROJECT_DIR$/cavoke_app/views.py" />
+        <option value="$PROJECT_DIR$/cavoke_app/urls.py" />
+        <option value="$PROJECT_DIR$/cavoke_app/models.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/cavoke_server/settings.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/gamestorage.py" />
+        <option value="$PROJECT_DIR$/cavoke_server/urls.py" />
       </list>
     </option>
   </component>
@@ -160,6 +170,12 @@
             <path>
               <item name="cavoke_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
+              <item name="cavoke_app" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cavoke_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
               <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -176,7 +192,484 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\waleko\Documents\Projects\cavoke\cavoke_server\cavoke_app" />
+      <recent name="C:\Users\waleko\Documents\Projects\cavoke\cavoke_server\cavoke_server" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newGame" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYzMDI0NDQyLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjMwMjQ0NDIsImV4cCI6MTU2MzAyODA0MiwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.mwhMQ-6d8m8-vVOnTW64KnGINJB4LCRdRAC8I-3kd3Qih2ply9iofWrA9WPUkWIAhT9MFmtNZj5kpNtP2e1zBZg73AexBF8p8E3-TKOhU00kFMg_B3QG-lWkx7Oc1RnKCwmgB4u9kL7VE8uW0qYLnt6C5h99Cy5nArZN_4u7pyC0kp134jp7-dE9zfKFWQUzJjCi6WRzl0kUCqzv0FgXiEWSrgoWM_J1LA7LcFEDQqkozL0ZW5hO229jUFyshy_srX9yVgajhQsOacAccjgP39U4aQ2okd40nxu-EaLLwAf95yYF7ImegCupW_k5a4rVhpmKwxdCg0Pi04dDT8WlUA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="sosiska" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="game_type_id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newGame" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYzMDI0NDQyLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjMwMjQ0NDIsImV4cCI6MTU2MzAyODA0MiwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.mwhMQ-6d8m8-vVOnTW64KnGINJB4LCRdRAC8I-3kd3Qih2ply9iofWrA9WPUkWIAhT9MFmtNZj5kpNtP2e1zBZg73AexBF8p8E3-TKOhU00kFMg_B3QG-lWkx7Oc1RnKCwmgB4u9kL7VE8uW0qYLnt6C5h99Cy5nArZN_4u7pyC0kp134jp7-dE9zfKFWQUzJjCi6WRzl0kUCqzv0FgXiEWSrgoWM_J1LA7LcFEDQqkozL0ZW5hO229jUFyshy_srX9yVgajhQsOacAccjgP39U4aQ2okd40nxu-EaLLwAf95yYF7ImegCupW_k5a4rVhpmKwxdCg0Pi04dDT8WlUA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="sosiska" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="data_type_id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="sosiska" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="lol" />
+                <option name="value" value="fds" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT dyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJwcm92aWRlcl9pZCI6ImFub255bW91cyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jYXZva2UtZmlyZWJhc2UiLCJhdWQiOiJjYXZva2UtZmlyZWJhc2UiLCJhdXRoX3RpbWUiOjE1NjMwMDg3NzYsInVzZXJfaWQiOiJvWXlidjg4RjNOTzRaMlBwTmtBbmtkWGRoajMyIiwic3ViIjoib1l5YnY4OEYzTk80WjJQcE5rQW5rZFhkaGozMiIsImlhdCI6MTU2MzAwODc3NiwiZXhwIjoxNTYzMDEyMzc2LCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7fSwic2lnbl9pbl9wcm92aWRlciI6ImFub255bW91cyJ9fQ.p6jz3TC1wEmb1sKsw9XMa6ac8BS9PUniJjTOvFzzBlYgaHfdLOqkZaEvSxOB7SOL_Qv8lW_iljreoLWlC-UqFS8M24efUjm2pVkPIh3nOS48g1sT8NbgfyNg0bXkciJH5wt-y_lQYfpVq1K0LuEDrGyTF2jJgFDDFaK3D6fNoCJh4Mk2KH7Eczc8uac-iGnn5Pn0zzNv-vewZaWRppA77S2luZ41a6tvNec1mpzXlJawrnLo1CkLdtc1q_rz1tbVmJIDtCQ1a4oDBJkXtFTm7VbUQgNw6cvHb1xmT9NP4GDa_eJg2YyXCv4SeHh-yzXn_swTOX3H9yM-SOrwLkvoeA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="sosiska" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="lol" />
+                <option name="value" value="fds" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYzMDA1NDkxLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjMwMDU0OTEsImV4cCI6MTU2MzAwOTA5MSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.kXhEj1QhEHcPICdktBWZn9Yb5tx7MnhJRwKGpVhI0hgSwzRxbHSoquVldaz8ve6QMrhsPDk9Wn3ppFggMf6Z2T3ZDL-2YjfGdh2WuhDHM87oR7-hCu0ptmFMAalY7JTU7UIW849ch_JcNas2pqC9Hpv78od3HqZQYsVPk0CsIONdcwBgBI-ULPZ5nW_xj0_h1qPmhyhsrk7roqxPEpUbyTXWaqbecpMTFeVXJcLFjWoQOqCPDBduwojlkFTNs16A24v3bBpAyL9OqlyIgfN96Isy7jav5m-pdMRZX6Q0ljIPTGdHgh9AX6Ecv5HWjxPw6qQuygJdrA1R6wGVePvr4g" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="sosiska" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="lol" />
+                <option name="value" value="fds" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJwcm92aWRlcl9pZCI6ImFub255bW91cyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jYXZva2UtZmlyZWJhc2UiLCJhdWQiOiJjYXZva2UtZmlyZWJhc2UiLCJhdXRoX3RpbWUiOjE1NjI5NjUxMTMsInVzZXJfaWQiOiJjd2hSY0NFUTdhYVBMSVBvZGQycWQ4OVZ0QWYyIiwic3ViIjoiY3doUmNDRVE3YWFQTElQb2RkMnFkODlWdEFmMiIsImlhdCI6MTU2Mjk2NTExMywiZXhwIjoxNTYyOTY4NzEzLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7fSwic2lnbl9pbl9wcm92aWRlciI6ImFub255bW91cyJ9fQ.UTyOh3ZhTyBzF6RJ7gsZDkJMjKsoETXk_rOmqvO7PQzA0XWL_zuMX2yLTCAn9fY5_q1UQ2HUxZJQEeKPx2i0DiRQJJGIYw7CGpvIcEEst7GYAvf9BxiIoRZ3Zion1PD-QthqweMn5S-8PFJIF-QBLTR4DFywF0V7rLCCZktGynOQpsznF21ulto5Dxbyr2YqcXYFLqiYPNShOg-O942CGVFNMJOT0nYYZUEmqmChxOoFjzKh8g4F9JY4vcTG3UVTYS5wN-TVGa0KfYM79DC13mTK0G1icT--4Jmn0nYOC6_DDw9y8x-hWVX90OW8NB1aAi2NC2Q6AKpGzB9GYnr7FA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJwcm92aWRlcl9pZCI6ImFub255bW91cyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jYXZva2UtZmlyZWJhc2UiLCJhdWQiOiJjYXZva2UtZmlyZWJhc2UiLCJhdXRoX3RpbWUiOjE1NjI5NjUxMTMsInVzZXJfaWQiOiJjd2hSY0NFUTdhYVBMSVBvZGQycWQ4OVZ0QWYyIiwic3ViIjoiY3doUmNDRVE3YWFQTElQb2RkMnFkODlWdEFmMiIsImlhdCI6MTU2Mjk2NTExMywiZXhwIjoxNTYyOTY4NzEzLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7fSwic2lnbl9pbl9wcm92aWRlciI6ImFub255bW91cyJ9fQ.UTyOh3ZhTyBzF6RJ7gsZDkJMjKsoETXk_rOmqvO7PQzA0XWL_zuMX2yLTCAn9fY5_q1UQ2HUxZJQEeKPx2i0DiRQJJGIYw7CGpvIcEEst7GYAvf9BxiIoRZ3Zion1PD-QthqweMn5S-8PFJIF-QBLTR4DFywF0V7rLCCZktGynOQpsznF21ulto5Dxbyr2YqcXYFLqiYPNShOg-O942CGVFNMJOT0nYYZUEmqmChxOoFjzKh8g4F9JY4vcTG3UVTYS5wN-TVGa0KfYM79DC13mTK0G1icT--4Jmn0nYOC6_DDw9y8x-hWVX90OW8NB1aAi2NC2Q6AKpGzB9GYnr7FA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJwcm92aWRlcl9pZCI6ImFub255bW91cyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jYXZva2UtZmlyZWJhc2UiLCJhdWQiOiJjYXZva2UtZmlyZWJhc2UiLCJhdXRoX3RpbWUiOjE1NjI5NjUxMTMsInVzZXJfaWQiOiJjd2hSY0NFUTdhYVBMSVBvZGQycWQ4OVZ0QWYyIiwic3ViIjoiY3doUmNDRVE3YWFQTElQb2RkMnFkODlWdEFmMiIsImlhdCI6MTU2Mjk2NTExMywiZXhwIjoxNTYyOTY4NzEzLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7fSwic2lnbl9pbl9wcm92aWRlciI6ImFub255bW91cyJ9fQ.UTyOh3ZhTyBzF6RJ7gsZDkJMjKsoETXk_rOmqvO7PQzA0XWL_zuMX2yLTCAn9fY5_q1UQ2HUxZJQEeKPx2i0DiRQJJGIYw7CGpvIcEEst7GYAvf9BxiIoRZ3Zion1PD-QthqweMn5S-8PFJIF-QBLTR4DFywF0V7rLCCZktGynOQpsznF21ulto5Dxbyr2YqcXYFLqiYPNShOg-O942CGVFNMJOT0nYYZUEmqmChxOoFjzKh8g4F9JY4vcTG3UVTYS5wN-TVGa0KfYM79DC13mTK0G1icT--4Jmn0nYOC6_DDw9y8x-hWVX90OW8NB1aAi2NC2Q6AKpGzB9GYnr7FA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&lt;&gt; 2019-07-12T114044.500.txt" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&lt;&gt; 2019-07-12T113804.500.txt" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&lt;&gt; 2019-07-12T113701.406.json" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJwcm92aWRlcl9pZCI6ImFub255bW91cyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jYXZva2UtZmlyZWJhc2UiLCJhdWQiOiJjYXZva2UtZmlyZWJhc2UiLCJhdXRoX3RpbWUiOjE1NjI5NjUxMTMsInVzZXJfaWQiOiJjd2hSY0NFUTdhYVBMSVBvZGQycWQ4OVZ0QWYyIiwic3ViIjoiY3doUmNDRVE3YWFQTElQb2RkMnFkODlWdEFmMiIsImlhdCI6MTU2Mjk2NTExMywiZXhwIjoxNTYyOTY4NzEzLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7fSwic2lnbl9pbl9wcm92aWRlciI6ImFub255bW91cyJ9fQ.UTyOh3ZhTyBzF6RJ7gsZDkJMjKsoETXk_rOmqvO7PQzA0XWL_zuMX2yLTCAn9fY5_q1UQ2HUxZJQEeKPx2i0DiRQJJGIYw7CGpvIcEEst7GYAvf9BxiIoRZ3Zion1PD-QthqweMn5S-8PFJIF-QBLTR4DFywF0V7rLCCZktGynOQpsznF21ulto5Dxbyr2YqcXYFLqiYPNShOg-O942CGVFNMJOT0nYYZUEmqmChxOoFjzKh8g4F9JY4vcTG3UVTYS5wN-TVGa0KfYM79DC13mTK0G1icT--4Jmn0nYOC6_DDw9y8x-hWVX90OW8NB1aAi2NC2Q6AKpGzB9GYnr7FA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&lt;&gt; 2019-07-12T114044.500.txt" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&lt;&gt; 2019-07-12T113804.500.txt" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&lt;&gt; 2019-07-12T113701.406.json" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYyOTYzNjYyLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjI5NjM2NjIsImV4cCI6MTU2Mjk2NzI2MiwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.UPYsmrafBKGgVCBnaNPwQdGQg_UaDuSp3QP9jKom9lCff9tlctG44tyTtwNUemrkopKt52n9v_ep41L-Or__oha0wllcHPokB8L1GbGiFpcVSJPH5xP1OEN7uN8Dm2JNlUp3_61gd-t3lyr9HGDfg-2TWHmOltN1GMIBvd1n_lFYbL-sz3flBeeOo3VhSh49O1ZvBLwMEUh0s3MTPUEezBsajlEKRUMhrx2l8pVI7C2J6GXndu_04Uavt-TcpkRRWtbJZ3wmdy6Rt-f_BWw_ha9Z4m3TTowFu8dVpK-6zIAopXoRRPGjVRSELEeVEKI-RCeYJfPK6nSrsz1TKDyLtA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="'*'" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYyOTYzNjYyLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjI5NjM2NjIsImV4cCI6MTU2Mjk2NzI2MiwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.UPYsmrafBKGgVCBnaNPwQdGQg_UaDuSp3QP9jKom9lCff9tlctG44tyTtwNUemrkopKt52n9v_ep41L-Or__oha0wllcHPokB8L1GbGiFpcVSJPH5xP1OEN7uN8Dm2JNlUp3_61gd-t3lyr9HGDfg-2TWHmOltN1GMIBvd1n_lFYbL-sz3flBeeOo3VhSh49O1ZvBLwMEUh0s3MTPUEezBsajlEKRUMhrx2l8pVI7C2J6GXndu_04Uavt-TcpkRRWtbJZ3wmdy6Rt-f_BWw_ha9Z4m3TTowFu8dVpK-6zIAopXoRRPGjVRSELEeVEKI-RCeYJfPK6nSrsz1TKDyLtA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/lol" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYyOTYxMTk3LCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjI5NjM0NjYsImV4cCI6MTU2Mjk2NzA2NiwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.o8YXWkWWACjEY9bvhK6gqPSwNSlFQwqy9rL-IfZorn-Xl6cahVv3znKk7gmHMi5t0xMy3T-_DwplrDKE5fZjjsyQNw7tJuG_1WsJozshfB_kjkYqE1o1QcLOqq1s-3q3UYVENaTyhkbvIJ-L3ei1vb14xRdlmfOoEr1Ggkh483I5q5ioU7wzXjJ1coVmidgF2PgEM_zJpZMZwifxROaW7Ah31H9TI9gviKKjaJ6jn5Ycm9fxkL7A1z7Kcj39YgAjH0g37in9YWndkq6P91ANQmUbT0cASzI9SUmDFxI_u1mJV25itwUGgwjm1x4GZivo-3EeSpOvW4uV64LihvkKBw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/lol" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYyOTYxMTk3LCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjI5NjM0NjYsImV4cCI6MTU2Mjk2NzA2NiwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.o8YXWkWWACjEY9bvhK6gqPSwNSlFQwqy9rL-IfZorn-Xl6cahVv3znKk7gmHMi5t0xMy3T-_DwplrDKE5fZjjsyQNw7tJuG_1WsJozshfB_kjkYqE1o1QcLOqq1s-3q3UYVENaTyhkbvIJ-L3ei1vb14xRdlmfOoEr1Ggkh483I5q5ioU7wzXjJ1coVmidgF2PgEM_zJpZMZwifxROaW7Ah31H9TI9gviKKjaJ6jn5Ycm9fxkL7A1z7Kcj39YgAjH0g37in9YWndkq6P91ANQmUbT0cASzI9SUmDFxI_u1mJV25itwUGgwjm1x4GZivo-3EeSpOvW4uV64LihvkKBw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/lol/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/lol/" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/lol/" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -190,7 +683,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.cavoke_server">
+    <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_1#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
+      <method v="2" />
+    </configuration>
     <configuration name="cavoke_server" type="Python.DjangoServer" factoryName="Django server">
       <module name="cavoke_server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,6 +714,12 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.rest-api_1#1" />
+        <item itemvalue="HTTP Request.rest-api#1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -233,43 +738,141 @@
       <workItem from="1562520415711" duration="1008000" />
       <workItem from="1562832269346" duration="745000" />
       <workItem from="1562833198466" duration="357000" />
-      <workItem from="1562835309657" duration="145000" />
+      <workItem from="1562835309657" duration="486000" />
+      <workItem from="1562842858591" duration="972000" />
+      <workItem from="1562852972528" duration="2091000" />
+      <workItem from="1562855127478" duration="1614000" />
+      <workItem from="1562866492526" duration="1000" />
+      <workItem from="1562946224409" duration="7217000" />
+      <workItem from="1562965140020" duration="2455000" />
+      <workItem from="1563008338638" duration="2857000" />
+      <workItem from="1563023996437" duration="3243000" />
+      <workItem from="1563027290556" duration="940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11984000" />
+    <option name="totallyTimeSpent" value="33715000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26742628" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.30227882" />
+      <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.28619304" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32921812" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13861386" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="manage.py@cavoke_server" order="10" weight="0.32921812" />
+      <window_info anchor="bottom" id="manage.py@cavoke_server" order="10" weight="0.3281471" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.33946252" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.33946252" />
+      <window_info anchor="bottom" id="REST Client" order="14" weight="0.6294201" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.29423591" />
+      <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.28619304" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281471" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="manage.py@cavoke_server" order="10" weight="0.3281471" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.33946252" />
+      <window_info anchor="bottom" id="REST Client" order="14" weight="0.44413012" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth/authentication.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth/authentication.py</url>
+          <line>180</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="request.data" language="Python" />
+        <watch expression="JSONParser().parse(request)" language="Python" />
+        <watch expression="firebase_user.provider_data[0].email" language="Python" />
+        <watch expression="data" language="Python" />
+        <watch expression="firebase_user.display_name" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>firebase_user.display_name</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>firebase_user.provider_data[0].email</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSONParser().parse(request)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -288,38 +891,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cavoke/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/db.sqlite3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django.wsgi" />
     <entry file="file://$PROJECT_DIR$/cavoke/admin.py" />
     <entry file="file://$PROJECT_DIR$/cavoke/apps.py" />
     <entry file="file://$PROJECT_DIR$/cavoke/views.py" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
+        <state relative-caret-position="416">
           <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_app/gamestorage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_server/cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cavoke_app/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#637#669#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -330,29 +926,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/cavoke_app/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="382" selection-start-line="382" selection-end-line="382" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="273" selection-start-line="273" selection-end-line="273" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_app/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.sqlite3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_app/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="864" selection-start-line="864" selection-end-line="864" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="716" selection-start-line="716" selection-end-line="716" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="404" selection-start-line="404" selection-end-line="404" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/uuid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_app/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_server/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/pathlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="1152" column="12" selection-start-line="1152" selection-start-column="12" selection-end-line="1152" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth/authentication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-303">
+          <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cavoke_server/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+        <state relative-caret-position="557">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
           <folding>
             <element signature="e#314#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/gamestorage.py">
+    <entry file="file://$PROJECT_DIR$/cavoke_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="357">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#634#671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cavoke_server/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#637#674#0" expanded="true" />
           </folding>
         </state>
       </provider>
