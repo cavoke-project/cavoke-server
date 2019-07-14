@@ -3,6 +3,7 @@ import uuid
 import subprocess
 from importlib import import_module
 import logging
+from typing import List
 
 from django.contrib.auth.models import User
 from django.db import models
@@ -16,10 +17,14 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
+from drf_firebase_auth.models import FirebaseUser
+from cavoke import Game
+
 from cavoke_server.settings import BASE_DIR
 from .gamestorage import *
 
 GAMESESSION_VALID_FOR = timezone.timedelta(weeks=1)
+MAX_GAMES_FOR_USER = 10
 
 validator = URLValidator()
 
@@ -30,6 +35,8 @@ try:
 except ValueError:
     pass
 db = firestore.client()
+
+logger = logging.getLogger(__name__)
 
 
 def git(*args):
@@ -71,6 +78,7 @@ class GameSession(models.Model):
                 raise ValueError("invalid game_type_id")
             gdict: dict = gdoc.to_dict()
             gitUrl = gdict['git_url']
+
             try:
                 validator(gitUrl)
                 if gitUrl[-4:] != '.git':
@@ -78,27 +86,55 @@ class GameSession(models.Model):
             except ValidationError:
                 raise ValueError("provided url is invalid")
 
-            logging.info("Cloning {" + gt_id + "}...")
             try:
+                logger.info("Cloning {" + gt_id + "}...")
                 git('clone', gitUrl, './cavoke_app/game_modules/' + gt_id)
-            except:
-                logging.error("Cloning of {" + gt_id + "} failed!")
+            except Exception as e:
+                logger.error("Cloning of {" + gt_id + "} failed! Details: {" + str(e) + "}")
+                raise RuntimeError(str(e))
             else:
-                logging.info("Cloning of {" + gt_id + "} is complete!")
+                logger.info("Cloning of {" + gt_id + "} is complete!")
 
-            # TODO make it work
-            module = import_module(self.game_type_id)
+            # TODO make it work with src/setup.py stuff
+            module = import_module('cavoke_app.game_modules.' + self.game_type_id)
+
             game_type_dict[self.game_type_id] = module
         session = module.MyGame()
         game_session_dict[self.game_session_id] = (session, Lock())
 
 
 class Profile(models.Model):
-    # make it work
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.TextField(max_length=500, blank=True)
-    location = models.CharField(max_length=30, blank=True)
-    birth_date = models.DateField(null=True, blank=True)
+
+    gamesMadeCount = models.IntegerField(default=0)
+    gamesMadeMaxCount = models.IntegerField(default=MAX_GAMES_FOR_USER)
+
+    firstActionOn = models.DateTimeField(auto_now_add=True)
+    lastPlayedOn = models.DateTimeField()
+    lastGameCreatedOn = models.DateTimeField()
+
+    def save(self, *args, **kwargs):
+        if not self.firstActionOn:
+            self.firstActionOn = timezone.now()
+
+    def uid(self):
+        return FirebaseUser.objects.get(user=self.user).uid
+
+    def update_lastPlayedOn(self):
+        self.lastPlayedOn = timezone.now()
+
+    def update_lastGameCreatedOn(self):
+        self.lastGameCreatedOn = timezone.now()
+    #
+    # def addAuthoredGame(self, gameId: str):
+    #     # TODO make atomic
+    #     gdoc = db.collection('users').document(self.uid()).get()
+    #     gdict: dict = gdoc.to_dict()
+    #     gdict['authored_games'].append(gameId)
+    #     db.collection('users').document(self.uid()).set(gdict)
+    #
+    # def authoredGames(self) -> List[str]:
+    #     return db.collection('users').document(self.uid()).get().to_dict()['authored_games']
 
 
 @receiver(post_save, sender=User)

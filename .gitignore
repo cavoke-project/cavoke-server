@@ -107,3 +107,5 @@ secret_settings.py
 cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json
 
 .idea/httpRequests/
+
+cavoke_app/game_modules/
