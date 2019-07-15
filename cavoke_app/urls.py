@@ -21,5 +21,8 @@ from cavoke_app import views
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('health/', views.health),
-    path('newGame/', views.newGameSession)
+    path('newSession/', views.newGameSession),
+    path('newGameType/', views.newGameType),
+    path('adminMethods/approveGame/', views.approveGame),
+    path('adminMethods/declineGame/', views.declineGame)
 ]

@@ -28,13 +28,7 @@ MAX_GAMES_FOR_USER = 10
 
 validator = URLValidator()
 
-try:
-    cred = credentials.Certificate(os.path.join(BASE_DIR, 'cavoke_server',
-                                                'cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json'))
-    firebase_admin.initialize_app(cred)
-except ValueError:
-    pass
-db = firestore.client()
+from cavoke_server import db
 
 logger = logging.getLogger(__name__)
 
@@ -109,22 +103,18 @@ class Profile(models.Model):
     gamesMadeCount = models.IntegerField(default=0)
     gamesMadeMaxCount = models.IntegerField(default=MAX_GAMES_FOR_USER)
 
-    firstActionOn = models.DateTimeField(auto_now_add=True)
-    lastPlayedOn = models.DateTimeField()
-    lastGameCreatedOn = models.DateTimeField()
-
-    def save(self, *args, **kwargs):
-        if not self.firstActionOn:
-            self.firstActionOn = timezone.now()
-
-    def uid(self):
-        return FirebaseUser.objects.get(user=self.user).uid
+    firstActionOn = models.DateTimeField(default=timezone.now)
+    lastPlayedOn = models.DateTimeField(default=timezone.now)
+    lastGameCreatedOn = models.DateTimeField(default=timezone.now)
 
     def update_lastPlayedOn(self):
         self.lastPlayedOn = timezone.now()
 
     def update_lastGameCreatedOn(self):
         self.lastGameCreatedOn = timezone.now()
+
+    def uid(self):
+        return FirebaseUser.objects.get(user=self.user).uid
     #
     # def addAuthoredGame(self, gameId: str):
     #     # TODO make atomic
