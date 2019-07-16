@@ -1,26 +1,17 @@
-import os
-import uuid
-import subprocess
-from importlib import import_module
 import logging
-from typing import List
+import subprocess
+import uuid
+from importlib import import_module
 
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.core.validators import URLValidator
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
-from django.core.validators import URLValidator
-from django.core.exceptions import ValidationError
+from drf_firebase_auth_cavoke.models import FirebaseUser
 
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
-
-from drf_firebase_auth.models import FirebaseUser
-from cavoke import Game
-
-from cavoke_server.settings import BASE_DIR
 from .gamestorage import *
 
 GAMESESSION_VALID_FOR = timezone.timedelta(weeks=1)

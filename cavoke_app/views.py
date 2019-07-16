@@ -4,32 +4,23 @@ import uuid
 from multiprocessing import Process
 from typing import Callable
 
+import cavoke.exceptions
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import URLValidator
 from django.http import HttpResponse
-from django.contrib.auth import authenticate
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
+from drf_firebase_auth_cavoke.models import FirebaseUser
 from google.cloud.firestore_v1 import ArrayUnion, ArrayRemove
-
-from rest_framework.authtoken.models import Token
-from rest_framework.decorators import api_view, permission_classes, authentication_classes
-from rest_framework.permissions import AllowAny
+from rest_framework.decorators import api_view, authentication_classes
+from rest_framework.response import Response
 from rest_framework.serializers import Serializer
 from rest_framework.status import *
-from rest_framework.response import Response
-from rest_framework import generics
-from rest_framework import permissions
-from rest_framework.response import Response
 
-from drf_firebase_auth.models import FirebaseUser
-
-from .models import GameSession
-from .gamestorage import game_session_dict
 from cavoke_server import db, notifyAdmin
-
-import cavoke.exceptions
+from .gamestorage import game_session_dict
+from .models import GameSession
 
 logger = logging.getLogger(__name__)
 validator = URLValidator()
@@ -126,6 +117,7 @@ def newGameType(request):
     if user.profile.gamesMadeCount >= user.profile.gamesMadeMaxCount:
         return error_response("User reached max authored games count", HTTP_417_EXPECTATION_FAILED)
     user.profile.gamesMadeCount += 1
+    user.profile.lastGameCreatedOn = timezone.now()
     user.save()
 
     gameId = uuid.uuid4().__str__()
@@ -281,7 +273,22 @@ def click(request):
 
 @csrf_exempt
 @api_view(["GET"])
-def getState(request):
+def dragTo(request):
+    return error_response("Not implemented!", HTTP_501_NOT_IMPLEMENTED)
+
+
+@csrf_exempt
+@api_view(["GET"])
+def getSessions(request):
+    uid = request.auth["uid"]
+    gs_list = list(GameSession.objects.filter(player_uid=uid))
+    gs_info_list = [Serializer(gs).data for gs in gs_list]
+    return ok_response({'game_sessions': gs_info_list})
+
+
+@csrf_exempt
+@api_view(["GET"])
+def getSession(request):
     uid = request.auth["uid"]
     data = request.query_params
     try:
@@ -313,38 +320,6 @@ def getState(request):
         return error_response(message, HTTP_500_INTERNAL_SERVER_ERROR)
     finally:
         game_session_dict[gameId][1].release()
-    return ok_response({"game": response})
 
-
-@csrf_exempt
-@api_view(["GET"])
-def dragTo(request):
-    return error_response("Not implemented!", HTTP_501_NOT_IMPLEMENTED)
-
-
-@csrf_exempt
-@api_view(["GET"])
-def getSessions(request):
-    uid = request.auth["uid"]
-    gs_list = list(GameSession.objects.filter(player_uid=uid))
-    gs_info_list = [Serializer(gs).data for gs in gs_list]
-    return ok_response({'game_sessions': gs_info_list})
-
-
-@csrf_exempt
-@api_view(["GET"])
-def getSession(request):
-    uid = request.auth["uid"]
-    data = request.query_params
-    try:
-        gameId = str(data['gameId'])
-    except KeyError:
-        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
-
-    try:
-        gs = GameSession.objects.get(game_session_id=gameId)
-    except GameSession.DoesNotExist:
-        return error_response("Game session doesn't exist", HTTP_400_BAD_REQUEST)
-
-    return ok_response({"game": Serializer(gs).data})
+    return ok_response({"data": Serializer(gs).data, "game": response})
 

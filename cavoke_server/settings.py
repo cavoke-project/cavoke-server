@@ -12,12 +12,15 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
-from cavoke_server.secret.secret_settings import SECRET_KEY, PRODUCTION_DB
-
-# from cavoke_server import tasks
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SECRET_PATH = os.path.join(BASE_DIR, 'cavoke_server', 'secret')
+
+from cavoke_server.secret.secret_settings import SECRET_KEY, PRODUCTION_DB, FIREBASE_JSON_FILE
+
+# from cavoke_server import tasks
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -42,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cavoke_app.apps.CavokeConfig',
     'rest_framework',
-    'drf_firebase_auth',
+    'drf_firebase_auth_cavoke',
     'cavoke',
     'logentry_admin',
     'celery'
@@ -82,8 +85,6 @@ WSGI_APPLICATION = 'cavoke_server.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-SECRET_PATH = os.path.join(BASE_DIR, 'cavoke_server', 'secret')
 
 if DEBUG:
     DATABASES = {
@@ -141,12 +142,12 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_AUTHENTICATION_CLASSES': (
         # 'rest_framework.authentication.SessionAuthentication',
-        'drf_firebase_auth.authentication.FirebaseAuthentication',
+        'drf_firebase_auth_cavoke.authentication.FirebaseAuthentication',
     )
 }
 
-DRF_FIREBASE_AUTH = {
-    'FIREBASE_SERVICE_ACCOUNT_KEY': os.path.join(SECRET_PATH, 'cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json'),
+DRF_FIREBASE_AUTH_CAVOKE = {
+    'FIREBASE_SERVICE_ACCOUNT_KEY': os.path.join(SECRET_PATH, FIREBASE_JSON_FILE),
     'ALLOW_ANONYMOUS_REQUESTS': True,
     'FIREBASE_ATTEMPT_CREATE_WITH_DISPLAY_NAME': False
 }

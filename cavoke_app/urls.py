@@ -24,5 +24,10 @@ urlpatterns = [
     path('newSession/', views.newGameSession),
     path('newGameType/', views.newGameType),
     path('adminMethods/approveGame/', views.approveGame),
-    path('adminMethods/declineGame/', views.declineGame)
+    path('adminMethods/declineGame/', views.declineGame),
+    path('getAuthor/', views.getAuthor),
+    path('getSessions/', views.getSessions),
+    path('getSession/', views.getSession),
+    path('click/', views.click),
+    path('dragTo/', views.dragTo)
 ]

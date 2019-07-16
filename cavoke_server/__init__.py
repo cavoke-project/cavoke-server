@@ -8,8 +8,8 @@ import requests
 import urllib.parse as urlparse
 from firebase_admin import credentials, firestore
 
-from cavoke_server.settings import BASE_DIR
-from cavoke_server.secret.secret_settings import TELEGRAM_BOT_CHAT, TELEGRAM_BOT_TOKEN
+from cavoke_server.settings import SECRET_PATH
+from cavoke_server.secret.secret_settings import TELEGRAM_BOT_CHAT, TELEGRAM_BOT_TOKEN, FIREBASE_JSON_FILE
 
 __author__ = "Alex Kovrigin (a.kovrigin0@gmail.com)"
 __license__ = "MIT"
@@ -19,8 +19,7 @@ __version__ = "0.0.1"
 logging.getLogger(__name__).addHandler(NullHandler())
 
 try:
-    cred = credentials.Certificate(os.path.join(BASE_DIR, 'cavoke_server', 'secret',
-                                                'cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json'))
+    cred = credentials.Certificate(os.path.join(SECRET_PATH, FIREBASE_JSON_FILE))
     firebase_admin.initialize_app(cred)
 except ValueError:
     pass
