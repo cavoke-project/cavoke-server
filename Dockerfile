@@ -44,15 +44,18 @@
 # VOLUME [ "$LETSENCRYPT_HOME", "/etc/apache2/sites-available", "/var/log/apache2" ]
 FROM ubuntu
 
+ADD . /var/www/html/cavoke_server/
+WORKDIR /var/www/html/cavoke_server/
+
 RUN apt-get update
 RUN apt-get install -y apt-utils vim curl apache2 apache2-utils
-RUN apt-get -y install python-pip apache2 libapache2-mod-wsgi
-RUN pip install --upgrade pip
-RUN pip install djangorestframework
-RUN pip install -r requirements.txt
+RUN apt-get -y install python3-pip python3 apache2 libapache2-mod-wsgi
+
+RUN pip3 install --upgrade pip
+RUN pip3 install djangorestframework
+RUN pip3 install -r requirements.txt
 ADD ./config/default.conf /etc/apache2/sites-available/000-default.conf
 
-ADD ./www/ /var/www/html
 RUN chmod 664 /var/www/html/tutorial/tutorial/db.sqlite3
 RUN chmod 775 /var/www/html/cavoke_server/cavoke_server
 RUN chown :www-data /var/www/html/tutorial/tutorial/db.sqlite3
