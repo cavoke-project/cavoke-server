@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
-from .secret_settings import SECRET_KEY
+from cavoke_server.secret.secret_settings import SECRET_KEY, PRODUCTION_DB
+
 # from cavoke_server import tasks
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -82,12 +83,19 @@ WSGI_APPLICATION = 'cavoke_server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+SECRET_PATH = os.path.join(BASE_DIR, 'cavoke_server', 'secret')
+
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': PRODUCTION_DB
+    }
 
 
 # Password validation
@@ -138,7 +146,7 @@ REST_FRAMEWORK = {
 }
 
 DRF_FIREBASE_AUTH = {
-    'FIREBASE_SERVICE_ACCOUNT_KEY': 'cavoke_server/cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json',
+    'FIREBASE_SERVICE_ACCOUNT_KEY': os.path.join(SECRET_PATH, 'cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json'),
     'ALLOW_ANONYMOUS_REQUESTS': True,
     'FIREBASE_ATTEMPT_CREATE_WITH_DISPLAY_NAME': False
 }

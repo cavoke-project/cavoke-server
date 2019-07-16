@@ -103,8 +103,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-secret_settings.py
-cavoke-firebase-firebase-adminsdk-tvoxx-ba98bbb529.json
+cavoke_server/secret/
 
 .idea/httpRequests/
 
