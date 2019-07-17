@@ -47,8 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_firebase_auth_cavoke',
     'cavoke',
-    'logentry_admin',
-    'celery'
+    'logentry_admin'
 ]
 
 MIDDLEWARE = [
