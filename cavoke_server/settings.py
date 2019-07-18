@@ -140,13 +140,13 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
         'drf_firebase_auth_cavoke.authentication.FirebaseAuthentication',
     )
 }
 
 DRF_FIREBASE_AUTH_CAVOKE = {
     'FIREBASE_SERVICE_ACCOUNT_KEY': os.path.join(SECRET_PATH, FIREBASE_JSON_FILE),
-    'ALLOW_ANONYMOUS_REQUESTS': True,
+    'ALLOW_ANONYMOUS_REQUESTS': False,
     'FIREBASE_ATTEMPT_CREATE_WITH_DISPLAY_NAME': False
 }

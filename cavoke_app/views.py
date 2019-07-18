@@ -74,15 +74,17 @@ def run_with_limited_time(func: Callable, args: tuple):
     return rdict['']
 
 
+def isAnonymous(uid: str):
+    return FirebaseUser.objects.get(uid=uid).isAnonymous
+
+
 # API methods
-@csrf_exempt
 @api_view(["GET"])
 @authentication_classes(())
 def health(request):
     return HttpResponse("OK")
 
 
-@csrf_exempt
 @api_view(["GET"])
 def newGameSession(request):
     uid = request.auth['uid']
@@ -102,11 +104,14 @@ def newGameSession(request):
     return ok_response({"game": Serializer(gs).data})
 
 
-@csrf_exempt
 @api_view(["GET"])
 def newGameType(request):
     # get request data
     uid = request.auth['uid']
+
+    if isAnonymous(uid):
+        return error_response("Anonymous users can't create game types!", HTTP_403_FORBIDDEN)
+
     data = request.query_params
     try:
         gitUrl = str(data['gitUrl'])
@@ -159,7 +164,6 @@ def newGameType(request):
     return ok_response({'gameId': gameId})
 
 
-@csrf_exempt
 @api_view(["GET"])
 @authentication_classes(())
 def approveGame(request):
@@ -187,7 +191,6 @@ def approveGame(request):
     return ok_response()
 
 
-@csrf_exempt
 @api_view(["GET"])
 @authentication_classes(())
 def declineGame(request):
@@ -216,14 +219,11 @@ def declineGame(request):
     return ok_response()
 
 
-@csrf_exempt
 @api_view(["GET"])
 def getAuthor(request):
     uid = request.auth["uid"]
     gdoc = db.collection('users').document(uid).get()
-    if not gdoc._exists:
-        return error_response("No such user", HTTP_400_BAD_REQUEST)
-    gdict = gdoc.to_dict()
+    gdict = gdoc.to_dict() if gdoc.to_dict() else {}
     f = lambda b: tryGetListFromDict(gdict, b)
     authored, pending = f("authored_games"), f("pending_games")
     return ok_response({
@@ -232,7 +232,6 @@ def getAuthor(request):
     })
 
 
-@csrf_exempt
 @api_view(["GET"])
 def click(request):
     uid = request.auth["uid"]
@@ -271,13 +270,11 @@ def click(request):
     return ok_response({"game": response})
 
 
-@csrf_exempt
 @api_view(["GET"])
 def dragTo(request):
     return error_response("Not implemented!", HTTP_501_NOT_IMPLEMENTED)
 
 
-@csrf_exempt
 @api_view(["GET"])
 def getSessions(request):
     uid = request.auth["uid"]
@@ -286,7 +283,6 @@ def getSessions(request):
     return ok_response({'game_sessions': gs_info_list})
 
 
-@csrf_exempt
 @api_view(["GET"])
 def getSession(request):
     uid = request.auth["uid"]
