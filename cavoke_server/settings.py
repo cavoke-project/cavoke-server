@@ -19,9 +19,6 @@ SECRET_PATH = os.path.join(BASE_DIR, 'cavoke_server', 'secret')
 
 from cavoke_server.secret.secret_settings import SECRET_KEY, PRODUCTION_DB, FIREBASE_JSON_FILE
 
-# from cavoke_server import tasks
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -31,7 +28,7 @@ from cavoke_server.secret.secret_settings import SECRET_KEY, PRODUCTION_DB, FIRE
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'api.cavoke.alexkovrigin.me']
 
 
 # Application definition
@@ -135,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
