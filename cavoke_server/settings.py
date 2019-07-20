@@ -26,9 +26,9 @@ from cavoke_server.secret.secret_settings import SECRET_KEY, PRODUCTION_DB, FIRE
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'api.cavoke.alexkovrigin.me']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'api.cavoke.alexkovrigin.me']
 
 
 # Application definition

@@ -32,7 +32,11 @@ class GameSession(models.Model):
     game_session_id = models.CharField(max_length=100, unique=True)
 
     player_uid = models.CharField(max_length=100)
-    game_type_id = models.CharField(max_length=100)
+    game_type = models.ForeignKey(
+        'GameType',
+        on_delete=models.CASCADE,
+        null=True
+    )
     createdOn = models.DateTimeField(auto_now_add=True)
     expiresOn = models.DateTimeField()
 
@@ -54,16 +58,11 @@ class GameSession(models.Model):
         return super(GameSession, self).save(*args, **kwargs)
 
     def __createGameObject(self):
-        gt_id = self.game_type_id
+        gt_id = self.game_type.game_type_id
         if gt_id in game_type_dict:
             module = game_type_dict[gt_id]
         else:
-            gdoc = db.collection('games').document(gt_id).get()
-            if not gdoc._exists:
-                raise ValueError("invalid game_type_id")
-            gdict: dict = gdoc.to_dict()
-            gitUrl = gdict['git_url']
-
+            gitUrl = self.game_type.git_url
             try:
                 validator(gitUrl)
                 if gitUrl[-4:] != '.git':
@@ -81,9 +80,9 @@ class GameSession(models.Model):
                 logger.info("Cloning of {" + gt_id + "} is complete!")
 
             # TODO make it work with src/setup.py stuff
-            module = import_module('cavoke_app.game_modules.' + self.game_type_id)
+            module = import_module('cavoke_app.game_modules.' + gt_id)
+            game_type_dict[gt_id] = module
 
-            game_type_dict[self.game_type_id] = module
         session = module.MyGame()
         game_session_dict[self.game_session_id] = (session, Lock())
 
@@ -127,3 +126,21 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
+
+
+class GameType(models.Model):
+    game_type_id = models.CharField(max_length=100, null=False)
+
+    name = models.CharField(max_length=100, null=False)
+    creator = models.CharField(max_length=100, null=False)
+    git_url = models.CharField(max_length=100, null=False)
+
+    description = models.CharField(max_length=1000, default='No description')
+    timesPlayed = models.IntegerField(default=0)
+    createdOn = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        if not self.createdOn:
+            # called on create
+            self.createdOn = timezone.now()
+        return super(GameType, self).save(*args, **kwargs)

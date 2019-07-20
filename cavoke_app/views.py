@@ -8,19 +8,21 @@ import cavoke.exceptions
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import URLValidator
+from django.db.models import QuerySet
 from django.http import HttpResponse
 from django.utils import timezone
-from django.views.decorators.csrf import csrf_exempt
 from drf_firebase_auth_cavoke.models import FirebaseUser
 from google.cloud.firestore_v1 import ArrayUnion, ArrayRemove
 from rest_framework.decorators import api_view, authentication_classes
+from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
-from rest_framework.serializers import Serializer
 from rest_framework.status import *
 
 from cavoke_server import db, notifyAdmin
 from .gamestorage import game_session_dict
-from .models import GameSession
+from .models import GameSession, GameType
+from .serializers import *
+from .errormessages import *
 
 logger = logging.getLogger(__name__)
 validator = URLValidator()
@@ -78,6 +80,16 @@ def isAnonymous(uid: str):
     return FirebaseUser.objects.get(uid=uid).isAnonymous
 
 
+def parse(query: QuerySet):
+    r = {}
+    for k, v in dict(query).items():
+        if isinstance(v, list):
+            r[k] = v[0]
+        else:
+            r[k] = v
+    return r
+
+
 # API methods
 @api_view(["GET"])
 @authentication_classes(())
@@ -88,20 +100,20 @@ def health(request):
 @api_view(["GET"])
 def newGameSession(request):
     uid = request.auth['uid']
-    data = request.query_params
+    data = parse(request.query_params)
     try:
         game_type_id = str(data['game_type_id'])
     except KeyError:
-        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
+        return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
 
-    gs = GameSession(game_type_id=game_type_id, player_uid=uid)
+    gs = GameSession(game_type=GameType.objects.get(game_type_id=game_type_id), player_uid=uid)
     try:
         gs.save()
     except Exception as e:
         logger.error(str(e))
-        return error_response("Error occured when processing the input data, check your url", HTTP_400_BAD_REQUEST)
+        return error_response("Error occurred when processing the input data.", HTTP_400_BAD_REQUEST)
     logging.INFO("New Game Session started by " + uid)
-    return ok_response({"game": Serializer(gs).data})
+    return ok_response({"game": GameSessionSerializer(gs).data})
 
 
 @api_view(["GET"])
@@ -110,43 +122,53 @@ def newGameType(request):
     uid = request.auth['uid']
 
     if isAnonymous(uid):
-        return error_response("Anonymous users can't create game types!", HTTP_403_FORBIDDEN)
+        return error_response(ANONYMOUS_FORBIDDEN, HTTP_403_FORBIDDEN)
 
-    data = request.query_params
+    data = parse(request.query_params)
     try:
-        gitUrl = str(data['gitUrl'])
+        _uid = data['creator']
+        if _uid != uid:
+            return error_response(NOT_OWNER, HTTP_400_BAD_REQUEST)
     except KeyError:
-        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
+        pass
+    data['game_type_id'] = uuid.uuid4().__str__()
+
+    gts = GameTypeSerializer(data=data)
+    if not gts.is_valid():
+        return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
+    gt = gts.create()
 
     user = userByUID(uid)
     if user.profile.gamesMadeCount >= user.profile.gamesMadeMaxCount:
-        return error_response("User reached max authored games count", HTTP_417_EXPECTATION_FAILED)
+        return error_response(AUTHOR_MAX_GAMES, HTTP_400_BAD_REQUEST)
     user.profile.gamesMadeCount += 1
     user.profile.lastGameCreatedOn = timezone.now()
     user.save()
 
-    gameId = uuid.uuid4().__str__()
     modtoken = uuid.uuid4().__str__()
+    gameId = gt.game_type_id
+    gitUrl = gt.git_url
 
     try:
         validator(gitUrl)
         if gitUrl[-4:] != '.git':
             raise ValidationError
     except ValidationError:
-        return error_response("Provided url is invalid!", HTTP_400_BAD_REQUEST)
+        return error_response(WRONG_URL, HTTP_400_BAD_REQUEST)
 
-    rdict = {
-        'gitUrl': gitUrl,
-        'creator': uid,
-        'modtoken': modtoken
-    }
+    rdict = GameTypeSerializer(gt).data
+    # INFO we do this as gt.save() wasn't called yet and createdOn isn't initialized
+    rdict['createdOn'] = timezone.now()
 
-    db.collection('pending_games').document(gameId).set(rdict)
+    secret_rdict = rdict.copy()
+    secret_rdict['modtoken'] = modtoken
+    db.collection('pending_games').document(gameId).set(secret_rdict)
+
     doc_ref = db.collection('users').document(uid)
     if doc_ref.get()._exists:
-        doc_ref.update({'pending_games': ArrayUnion([gameId])})
+        doc_ref.update({'pending_games': ArrayUnion([rdict])})
     else:
-        doc_ref.set({'pending_games': [gameId]})
+        doc_ref.set({'pending_games': [rdict]})
 
     host = request._request._current_scheme_host
     message = ('New game for moderation check:'
@@ -156,61 +178,64 @@ def newGameType(request):
                'https://console.firebase.google.com/project/cavoke-firebase/database/firestore/'
                'data~2Fpending_games~2F' + gameId +
                '\n\n'
-               'To **approve** click ' + host + '/v1/adminMethods/approveGame?gameId=' + gameId + '&token=' + modtoken +
+               'To **approve** click ' + host + '/v1/adminMethods/approveGame?game_type_id=' + gameId + '&token=' + modtoken +
                '\n'
-               'To **decline** click ' + host + '/v1/adminMethods/declineGame?gameId=' + gameId + '&token=' + modtoken
+               'To **decline** click ' + host + '/v1/adminMethods/declineGame?game_type_id=' + gameId + '&token=' + modtoken
                )
     notifyAdmin(message)
-    return ok_response({'gameId': gameId})
+    return ok_response(rdict)
 
 
 @api_view(["GET"])
 @authentication_classes(())
 def approveGame(request):
-    data = request.query_params
+    data = parse(request.query_params)
     try:
-        gameId = str(data['gameId'])
+        game_type_id = str(data['game_type_id'])
         modtoken = str(data['token'])
     except KeyError:
-        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
+        return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
 
-    gdoc = db.collection('pending_games').document(gameId).get()
+    gdoc = db.collection('pending_games').document(game_type_id).get()
     if not gdoc._exists:
-        return error_response("No such game", HTTP_400_BAD_REQUEST)
+        return error_response(GAME_NOT_FOUND, HTTP_400_BAD_REQUEST)
     gdict: dict = gdoc.to_dict()
     if gdict['modtoken'] != modtoken:
-        return error_response("Wrong token!", HTTP_403_FORBIDDEN)
+        return error_response(WRONG_TOKEN, HTTP_403_FORBIDDEN)
     uid = gdict['creator']
 
-    db.collection('pending_games').document(gameId).delete()
-    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([gameId])})
-
-    db.collection('users').document(uid).update({u'authored_games': ArrayUnion([gameId])})
     gdict.pop('modtoken')
-    db.collection('games').document(gameId).set(gdict)
-    return ok_response()
+    serializer = GameTypeSerializer(data=gdict)
+    if not serializer.is_valid():
+        return error_response(ERROR_OCCURRED, HTTP_500_INTERNAL_SERVER_ERROR)
+    serializer.save()
+
+    db.collection('pending_games').document(game_type_id).delete()
+    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([game_type_id])})
+    db.collection('users').document(uid).update({u'authored_games': ArrayUnion([game_type_id])})
+    return ok_response(gdict)
 
 
 @api_view(["GET"])
 @authentication_classes(())
 def declineGame(request):
-    data = request.query_params
+    data = parse(request.query_params)
     try:
-        gameId = str(data['gameId'])
+        game_type_id = str(data['game_type_id'])
         modtoken = str(data['token'])
     except KeyError:
-        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
+        return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
 
-    gdoc = db.collection('pending_games').document(gameId).get()
+    gdoc = db.collection('pending_games').document(game_type_id).get()
     if not gdoc._exists:
-        return error_response("No such game", HTTP_400_BAD_REQUEST)
+        return error_response(GAME_NOT_FOUND, HTTP_400_BAD_REQUEST)
     gdict = gdoc.to_dict()
     if gdict['modtoken'] != modtoken:
-        return error_response("Wrong token!", HTTP_403_FORBIDDEN)
+        return error_response(WRONG_TOKEN, HTTP_403_FORBIDDEN)
     uid = gdict['creator']
 
-    db.collection('pending_games').document(gameId).delete()
-    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([gameId])})
+    db.collection('pending_games').document(game_type_id).delete()
+    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([game_type_id])})
 
     # TODO make atomic
     user = userByUID(uid)
@@ -235,20 +260,20 @@ def getAuthor(request):
 @api_view(["GET"])
 def click(request):
     uid = request.auth["uid"]
-    data = request.query_params
+    data = parse(request.query_params)
     try:
-        gameId = str(data['gameId'])
-        unitClicked = str(data['unitClicked'])
+        gameId = str(data['game_id'])
+        unitClicked = str(data['unit_clicked'])
     except KeyError:
-        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
+        return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
 
     # check if user is the owner
     try:
         gs = GameSession.objects.get(game_session_id=gameId)
     except GameSession.DoesNotExist:
-        return error_response("No such gameId", HTTP_400_BAD_REQUEST)
+        return error_response(GAME_NOT_FOUND, HTTP_400_BAD_REQUEST)
     if gs.player_uid != uid:
-        return error_response("Not your game!", HTTP_403_FORBIDDEN)
+        return error_response(NOT_OWNER, HTTP_403_FORBIDDEN)
 
     # stats
     user = userByUID(uid)
@@ -258,9 +283,9 @@ def click(request):
     try:
         response = run_with_limited_time(game_session_dict[gameId][0].clickUnitId, (unitClicked,))
     except cavoke.exceptions.UnitNotFoundError:
-        return error_response("No such unit", HTTP_400_BAD_REQUEST)
+        return error_response(UNIT_NOT_FOUND, HTTP_400_BAD_REQUEST)
     except TimeoutError:
-        return error_response("Timeout error", HTTP_500_INTERNAL_SERVER_ERROR)
+        return error_response(TIMEOUT_ERROR, HTTP_500_INTERNAL_SERVER_ERROR)
     except Exception as e:
         message = "Error occurred during game code execution: [" + str(e) + "]. Contact developer"
         logger.error(message)
@@ -272,33 +297,33 @@ def click(request):
 
 @api_view(["GET"])
 def dragTo(request):
-    return error_response("Not implemented!", HTTP_501_NOT_IMPLEMENTED)
+    return error_response(NOT_IMPLEMENTED, HTTP_501_NOT_IMPLEMENTED)
 
 
 @api_view(["GET"])
 def getSessions(request):
     uid = request.auth["uid"]
     gs_list = list(GameSession.objects.filter(player_uid=uid))
-    gs_info_list = [Serializer(gs).data for gs in gs_list]
+    gs_info_list = [GameSessionSerializer(gs).data for gs in gs_list]
     return ok_response({'game_sessions': gs_info_list})
 
 
 @api_view(["GET"])
 def getSession(request):
     uid = request.auth["uid"]
-    data = request.query_params
+    data = parse(request.query_params)
     try:
-        gameId = str(data['gameId'])
+        gameId = str(data['game_id'])
     except KeyError:
-        return error_response("Not enough params", HTTP_400_BAD_REQUEST)
+        return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
 
     # check if user is the owner
     try:
         gs = GameSession.objects.get(game_session_id=gameId)
     except GameSession.DoesNotExist:
-        return error_response("No such gameId", HTTP_400_BAD_REQUEST)
+        return error_response(GAME_NOT_FOUND, HTTP_400_BAD_REQUEST)
     if gs.player_uid != uid:
-        return error_response("Not your game!", HTTP_403_FORBIDDEN)
+        return error_response(NOT_OWNER, HTTP_403_FORBIDDEN)
 
     # stats
     user = userByUID(uid)
@@ -309,7 +334,7 @@ def getSession(request):
         response = game_session_dict[gameId][0].getResponse()
         run_with_limited_time(game_session_dict[gameId][0].getResponse, ())
     except TimeoutError:
-        return error_response("Timeout error", HTTP_500_INTERNAL_SERVER_ERROR)
+        return error_response(TIMEOUT_ERROR, HTTP_500_INTERNAL_SERVER_ERROR)
     except Exception as e:
         message = "Error occurred during game code execution: [" + str(e) + "]. Contact the developer."
         logger.error(message)
@@ -317,5 +342,10 @@ def getSession(request):
     finally:
         game_session_dict[gameId][1].release()
 
-    return ok_response({"data": Serializer(gs).data, "game": response})
+    return ok_response({"data": GameSessionSerializer(gs).data, "game": response})
 
+
+@api_view(["GET"])
+@authentication_classes(())
+def getTypes(request):
+    return ok_response({'game_types': GameTypeSerializer(GameType.objects.all(), many=True).data})
