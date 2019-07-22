@@ -29,5 +29,6 @@ urlpatterns = [
     path('getSessions/', views.getSessions),
     path('getSession/', views.getSession),
     path('click/', views.click),
-    path('dragTo/', views.dragTo)
+    path('dragTo/', views.dragTo),
+    path('getTypes/', views.getTypes)
 ]
