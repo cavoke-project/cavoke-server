@@ -21,7 +21,7 @@ class GameSessionSerializer(ModelSerializer):
         model = GameSession
         fields = '__all__'
 
-    def create(self):
+    def createInstance(self):
         return GameSession(**self.validated_data)
 
 
@@ -30,5 +30,5 @@ class GameTypeSerializer(ModelSerializer):
         model = GameType
         fields = '__all__'
 
-    def create(self):
+    def createInstance(self):
         return GameType(**self.validated_data)

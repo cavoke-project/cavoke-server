@@ -131,12 +131,13 @@ def newGameType(request):
             return error_response(NOT_OWNER, HTTP_400_BAD_REQUEST)
     except KeyError:
         pass
-    data['game_type_id'] = uuid.uuid4().__str__()
+    # as it will be the name of package in game_modules
+    data['game_type_id'] = uuid.uuid4().__str__().replace('-', '')
 
     gts = GameTypeSerializer(data=data)
     if not gts.is_valid():
         return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
-    gt = gts.create()
+    gt = gts.createInstance()
 
     user = userByUID(uid)
     if user.profile.gamesMadeCount >= user.profile.gamesMadeMaxCount:
