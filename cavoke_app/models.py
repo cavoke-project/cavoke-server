@@ -133,6 +133,7 @@ class GameType(models.Model):
 
     name = models.CharField(max_length=100, null=False)
     creator = models.CharField(max_length=100, null=False)
+    creator_display_name = models.CharField(max_length=100, null=False)
     git_url = models.CharField(max_length=100, null=False)
 
     description = models.CharField(max_length=1000, default='No description')

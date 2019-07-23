@@ -125,13 +125,15 @@ def newGameType(request):
         return error_response(ANONYMOUS_FORBIDDEN, HTTP_403_FORBIDDEN)
 
     data = parse(request.query_params)
+    user = userByUID(uid)
     try:
         _uid = data['creator']
         if _uid != uid:
             return error_response(NOT_OWNER, HTTP_400_BAD_REQUEST)
     except KeyError:
-        pass
-    # as it will be the name of package in game_modules
+        data['creator'] = uid
+    data['creator_display_name'] = user.username
+    # replace as it will be the name of package in game_modules
     data['game_type_id'] = uuid.uuid4().__str__().replace('-', '')
 
     gts = GameTypeSerializer(data=data)
@@ -139,7 +141,6 @@ def newGameType(request):
         return error_response(NOT_ENOUGH_PARAMS, HTTP_400_BAD_REQUEST)
     gt = gts.createInstance()
 
-    user = userByUID(uid)
     if user.profile.gamesMadeCount >= user.profile.gamesMadeMaxCount:
         return error_response(AUTHOR_MAX_GAMES, HTTP_400_BAD_REQUEST)
     user.profile.gamesMadeCount += 1
@@ -350,3 +351,4 @@ def getSession(request):
 @authentication_classes(())
 def getTypes(request):
     return ok_response({'game_types': GameTypeSerializer(GameType.objects.all(), many=True).data})
+
