@@ -1,3 +1,7 @@
+"""
+Error messages intended for easier replacement in case of typos, etc.
+"""
+
 NOT_ENOUGH_PARAMS = 'Not enough parameters'
 ERROR_OCCURRED = 'Error occurred when processing the input data'
 ANONYMOUS_FORBIDDEN = 'Anonymous users don\'t have permission to perform this action'

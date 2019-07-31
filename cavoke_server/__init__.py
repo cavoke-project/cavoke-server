@@ -18,6 +18,7 @@ __version__ = "0.0.1"
 
 logging.getLogger(__name__).addHandler(NullHandler())
 
+# initialize firebase
 try:
     cred = credentials.Certificate(os.path.join(SECRET_PATH, FIREBASE_JSON_FILE))
     firebase_admin.initialize_app(cred)
@@ -46,6 +47,11 @@ del NullHandler
 
 
 def notifyAdmin(message: str):
+    """
+    Notifies moderator(-s)
+    :param message: message to send
+    """
+    # send message via telegram
     try:
         telegram_request = requests.get(
             'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN +
