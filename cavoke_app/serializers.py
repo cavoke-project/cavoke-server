@@ -19,7 +19,7 @@ from cavoke_app.models import GameSession, GameType
 class GameSessionSerializer(ModelSerializer):
     class Meta:
         model = GameSession
-        fields = '__all__'
+        exclude = ['game_object_bytes', 'id']
 
     def createInstance(self):
         return GameSession(**self.validated_data)
@@ -28,7 +28,7 @@ class GameSessionSerializer(ModelSerializer):
 class GameTypeSerializer(ModelSerializer):
     class Meta:
         model = GameType
-        fields = '__all__'
+        exclude = ['id']
 
     def createInstance(self):
         return GameType(**self.validated_data)

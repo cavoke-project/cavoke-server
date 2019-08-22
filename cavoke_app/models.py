@@ -1,4 +1,5 @@
 import logging
+import os
 import subprocess
 import pickle
 from pickle import HIGHEST_PROTOCOL
@@ -15,29 +16,12 @@ from drf_firebase_auth_cavoke.models import FirebaseUser
 
 from .gamestorage import *
 from .exceptions import *
-from . import randomUUID
-
-"""
-Time delta, that game sessions should be valid for
-"""
-GAMESESSION_VALID_FOR = timezone.timedelta(weeks=1)
-
-"""
-Maximum number of game types each user can author
-"""
-MAX_AUTHORED_GAMES = 10
-
-"""
-Maximum number of active game sessions each user can have
-"""
-MAX_ACTIVE_GAME_SESSIONS = 10
-
+from .config import *
 
 # url validator
 validator = URLValidator()
 
 logger = logging.getLogger(__name__)
-
 
 def git(*args):
     """
@@ -79,6 +63,10 @@ class GameSession(models.Model):
     def __str__(self):
         return self.game_session_id
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__game = None
+
     def save(self, *args, **kwargs):
         if not self.game_session_id:
             # check if session count is ok
@@ -100,8 +88,6 @@ class GameSession(models.Model):
         """
         gt_id = self.game_type.game_type_id
         gt = GameType.objects.get(game_type_id=gt_id)
-        if gt.DoesNotExist:
-            return GameTypeDoesNotExistError
         module = gt.getGameModule()
         session = module.MyGame()
         self.__game = session
@@ -197,8 +183,12 @@ class GameType(models.Model):
     # timestamp of creation time
     createdOn = models.DateTimeField(auto_now_add=True)
 
-    # module binary
+    # module binary FIXME REMOVE THIS
     type_module_bytes = models.BinaryField()
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__game_module = None
 
     def save(self, *args, **kwargs):
         if not self.createdOn:
@@ -219,23 +209,8 @@ class GameType(models.Model):
                     raise ValidationError
             except ValidationError:
                 raise UrlInvalidError
-
             # try cloning
-            try:
-                logger.info("Cloning {" + gt_id + "}...")
-                git('clone', gitUrl, './cavoke_app/game_modules/' + gt_id)
-            except Exception as e:
-                logger.error("Cloning of {" + gt_id + "} failed! Details: {" + str(e) + "}")
-                raise RuntimeError(str(e))
-            else:
-                logger.info("Cloning of {" + gt_id + "} is complete!")
-
-            # TODO make it work with src/setup.py stuff
-            # save
-            module = import_module('cavoke_app.game_modules.' + gt_id)
-            self.__game_module = module
-            w_bytes = pickle.dumps(module, HIGHEST_PROTOCOL)
-            self.type_module_bytes = w_bytes
+            self.getGameModule()
         return super(GameType, self).save(*args, **kwargs)
 
     def getGameModule(self):
@@ -245,6 +220,19 @@ class GameType(models.Model):
         """
         if self.__game_module is not None:
             return self.__game_module
-        module = pickle.loads(self.type_module_bytes)
+        gt_id = self.game_type_id
+        # clone
+        if not os.path.exists(GAME_TYPES_FOLDER):
+            try:
+                logger.info("Cloning {" + gt_id + "}...")
+                git('clone', self.git_url, GAME_TYPES_FOLDER + gt_id)
+            except Exception as e:
+                logger.error("Cloning of {" + gt_id + "} failed! Details: {" + str(e) + "}")
+                raise RuntimeError(str(e))
+            else:
+                logger.info("Cloning of {" + gt_id + "} is complete!")
+        # TODO make it work with src/setup.py stuff
+        # save
+        module = import_module('cavoke_app.game_modules.' + gt_id)
         self.__game_module = module
         return module

@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad633672-21f5-4709-8705-38c0a1305709" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Alex.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cavoke_app/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cavoke_app/migrations/0009_gametype_creator_display_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cavoke_app/migrations/0010_auto_20190822_1713.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cavoke_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cavoke_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_app/errormessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/errormessages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_app/gamestorage.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/gamestorage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_app/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_server/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +52,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response81.json" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1PeYjuGeG6Y4FrTkikQ1Idli8oF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -93,6 +85,206 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/getSession" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDk4MzYzLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0OTgzNjMsImV4cCI6MTU2NjUwMTk2MywiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.1U5sKcalaLL6MxGeACzlmvUmHhDsGBLV5HzlE0vgvqI9KQmp0OjpTNBXw80WhQVkeV3RnUlATeNz_Q1mXemLHrUN8epVU0ZfyynjByL-9N7uYxksxvu9zuxL0KkAuSxeD0kzLHs9Nt_scbePsL6WDD08Ui7F3Xce07G2HqEbKag7w2jg90GOduRxJfTBcSGQCacsyqapLFSAAGo3Gc59kgDb75nCa71MpagidiX1o0lVcRO5-Y5mmIubO4SJm8eegLoJwX9VDyA1y-4Z56fm1pzpd_L85x65VsC3vA1B5MyKbClE1rPwr2QuGxxHH0dSyuQ6fHqb9BqfGq3ZMf3iVg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_id" />
+                <option name="value" value="29af8742a3c94133ba76b91249bae654" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/getSession" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDkxNDI1LCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0OTE0MjUsImV4cCI6MTU2NjQ5NTAyNSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.d9Zo1MygjT2kxvYsx-Mw-_uBf_rc2EaR8cZH1cAtiL3fS1dnMT8iDxvAD6oh9-hFG8my0vRIMFbqSR3PONS4bqihha6wFkxWskPCgoSyuo58TNZqksPjwmzId6JUlLFBSIEIRitupO5FzEqtgrSiHmJ0Bk9brXLhDQWffQf0jESJejim8mP2poAWfYz9HmM0aEBdRbN9Ru71tKGQsd6U9xeONCDGhGjRXYNHf3wDSf_a5uPCeBnwMC9roVafVu7PPy95A1n9bKwWrwRaeuZ02gbn1WjeTeqgoYdft6IOpR8sNbDXTTvAfM2YGJ_NBymMZ6fueuGv_8L95vjTn4Po9g" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_id" />
+                <option name="value" value="29af8742a3c94133ba76b91249bae654" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/getSession" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDkxNDI1LCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0OTE0MjUsImV4cCI6MTU2NjQ5NTAyNSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.d9Zo1MygjT2kxvYsx-Mw-_uBf_rc2EaR8cZH1cAtiL3fS1dnMT8iDxvAD6oh9-hFG8my0vRIMFbqSR3PONS4bqihha6wFkxWskPCgoSyuo58TNZqksPjwmzId6JUlLFBSIEIRitupO5FzEqtgrSiHmJ0Bk9brXLhDQWffQf0jESJejim8mP2poAWfYz9HmM0aEBdRbN9Ru71tKGQsd6U9xeONCDGhGjRXYNHf3wDSf_a5uPCeBnwMC9roVafVu7PPy95A1n9bKwWrwRaeuZ02gbn1WjeTeqgoYdft6IOpR8sNbDXTTvAfM2YGJ_NBymMZ6fueuGv_8L95vjTn4Po9g" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_id" />
+                <option name="value" value="fd30d8e8aef049cab8055f856bc22625" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newSession" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDkxNDI1LCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0OTE0MjUsImV4cCI6MTU2NjQ5NTAyNSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.d9Zo1MygjT2kxvYsx-Mw-_uBf_rc2EaR8cZH1cAtiL3fS1dnMT8iDxvAD6oh9-hFG8my0vRIMFbqSR3PONS4bqihha6wFkxWskPCgoSyuo58TNZqksPjwmzId6JUlLFBSIEIRitupO5FzEqtgrSiHmJ0Bk9brXLhDQWffQf0jESJejim8mP2poAWfYz9HmM0aEBdRbN9Ru71tKGQsd6U9xeONCDGhGjRXYNHf3wDSf_a5uPCeBnwMC9roVafVu7PPy95A1n9bKwWrwRaeuZ02gbn1WjeTeqgoYdft6IOpR8sNbDXTTvAfM2YGJ_NBymMZ6fueuGv_8L95vjTn4Po9g" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_type_id" />
+                <option name="value" value="43e23aef511f48dbaa02e069ba0efc4b" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newSession" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDkxNDI1LCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0OTE0MjUsImV4cCI6MTU2NjQ5NTAyNSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.d9Zo1MygjT2kxvYsx-Mw-_uBf_rc2EaR8cZH1cAtiL3fS1dnMT8iDxvAD6oh9-hFG8my0vRIMFbqSR3PONS4bqihha6wFkxWskPCgoSyuo58TNZqksPjwmzId6JUlLFBSIEIRitupO5FzEqtgrSiHmJ0Bk9brXLhDQWffQf0jESJejim8mP2poAWfYz9HmM0aEBdRbN9Ru71tKGQsd6U9xeONCDGhGjRXYNHf3wDSf_a5uPCeBnwMC9roVafVu7PPy95A1n9bKwWrwRaeuZ02gbn1WjeTeqgoYdft6IOpR8sNbDXTTvAfM2YGJ_NBymMZ6fueuGv_8L95vjTn4Po9g" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="sosiska" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="git_url" />
+                <option name="value" value="https://github.com/cavoke-project/cavoke-lib-example.git" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/newGameType" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDkxNDI1LCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0OTE0MjUsImV4cCI6MTU2NjQ5NTAyNSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.d9Zo1MygjT2kxvYsx-Mw-_uBf_rc2EaR8cZH1cAtiL3fS1dnMT8iDxvAD6oh9-hFG8my0vRIMFbqSR3PONS4bqihha6wFkxWskPCgoSyuo58TNZqksPjwmzId6JUlLFBSIEIRitupO5FzEqtgrSiHmJ0Bk9brXLhDQWffQf0jESJejim8mP2poAWfYz9HmM0aEBdRbN9Ru71tKGQsd6U9xeONCDGhGjRXYNHf3wDSf_a5uPCeBnwMC9roVafVu7PPy95A1n9bKwWrwRaeuZ02gbn1WjeTeqgoYdft6IOpR8sNbDXTTvAfM2YGJ_NBymMZ6fueuGv_8L95vjTn4Po9g" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="sosiska" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="git_url" />
+                <option name="value" value="https://github.com/cavoke-project/cavoke-lib-example.git" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8000/v1/newGameType" />
@@ -1319,7 +1511,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.rest-api#1">
+  <component name="RunManager" selected="Django server.cavoke_server">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
       <method v="2" />
     </configuration>
@@ -1417,7 +1609,8 @@
       <workItem from="1566236194831" duration="693000" />
       <workItem from="1566237525654" duration="948000" />
       <workItem from="1566465250703" duration="10044000" />
-      <workItem from="1566490104112" duration="599000" />
+      <workItem from="1566490104112" duration="5044000" />
+      <workItem from="1566498311918" duration="599000" />
     </task>
     <servers />
   </component>
@@ -1451,29 +1644,30 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>272</line>
+          <line>173</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>257</line>
+          <line>158</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>150</line>
+          <line>51</line>
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/cavoke_app/models.py</url>
-          <line>235</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="GameSession.objects.all()" language="Python" />
+        <watch expression="gs.getCavokeGame()" language="Python" />
+        <watch expression="self.__game" language="Python" />
+        <watch expression="TIMEOUT_FOR_GAME" language="Python" />
+        <watch expression="rdict['']" language="Python" />
+        <watch expression="func()" language="Python" />
+        <watch expression="requirers" language="Python" />
       </configuration>
     </watches-manager>
   </component>
