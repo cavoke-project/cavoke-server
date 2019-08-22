@@ -1,6 +1,7 @@
 import logging
 import subprocess
-import uuid
+import pickle
+from pickle import HIGHEST_PROTOCOL
 from importlib import import_module
 
 from django.contrib.auth.models import User
@@ -13,6 +14,8 @@ from django.utils import timezone
 from drf_firebase_auth_cavoke.models import FirebaseUser
 
 from .gamestorage import *
+from .exceptions import *
+from . import randomUUID
 
 """
 Time delta, that game sessions should be valid for
@@ -20,9 +23,15 @@ Time delta, that game sessions should be valid for
 GAMESESSION_VALID_FOR = timezone.timedelta(weeks=1)
 
 """
-Maximum number of games each user can author
+Maximum number of game types each user can author
 """
-MAX_GAMES_FOR_USER = 10
+MAX_AUTHORED_GAMES = 10
+
+"""
+Maximum number of active game sessions each user can have
+"""
+MAX_ACTIVE_GAME_SESSIONS = 10
+
 
 # url validator
 validator = URLValidator()
@@ -61,6 +70,9 @@ class GameSession(models.Model):
     # game session expiration stamp
     expiresOn = models.DateTimeField()
 
+    # object of game in binary to be decoded with pickle
+    game_object_bytes = models.BinaryField()
+
     class Meta:
         ordering = ('createdOn', 'player_uid', 'game_type_id', 'game_session_id', 'expiresOn')
 
@@ -69,10 +81,14 @@ class GameSession(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.game_session_id:
+            # check if session count is ok
+            if GameSession.objects.filter(player_uid=self.player_uid).count() > MAX_ACTIVE_GAME_SESSIONS:
+                raise TooManyGameSessionsWarning
+
             # called on create, so we initialize
             self.createdOn = timezone.now()
             self.expiresOn = self.createdOn + GAMESESSION_VALID_FOR
-            self.game_session_id = uuid.uuid4().__str__()
+            self.game_session_id = randomUUID()
 
             self.__createGameObject()
 
@@ -83,12 +99,24 @@ class GameSession(models.Model):
         create Game object from cavoke-lib
         """
         gt_id = self.game_type.game_type_id
-        if gt_id in game_type_dict:
-            module = game_type_dict[gt_id]
-        else:
-            raise ValueError("Game type doesn't exist")
+        gt = GameType.objects.get(game_type_id=gt_id)
+        if gt.DoesNotExist:
+            return GameTypeDoesNotExistError
+        module = gt.getGameModule()
         session = module.MyGame()
-        game_session_dict[self.game_session_id] = (session, Lock())
+        self.__game = session
+        self.game_object_bytes = pickle.dumps(session, HIGHEST_PROTOCOL)
+
+    def getCavokeGame(self) -> Game:
+        """
+        Read game binary and make it into a game object
+        :return: cavoke game
+        """
+        if self.__game is not None:
+            return self.__game
+        game = pickle.loads(self.game_object_bytes)
+        self.__game = game
+        return game
 
 
 class Profile(models.Model):
@@ -98,10 +126,11 @@ class Profile(models.Model):
     # main Django user model
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    # TODO remove this "Костыль"-like code
     # games authored integer
     gamesMadeCount = models.IntegerField(default=0)
-    # maximum amount of games allowed to made
-    gamesMadeMaxCount = models.IntegerField(default=MAX_GAMES_FOR_USER)
+    # maximum amount of games allowed to be made
+    gamesMadeMaxCount = models.IntegerField(default=MAX_AUTHORED_GAMES)
 
     # first api request timestamp
     firstActionOn = models.DateTimeField(default=timezone.now)
@@ -168,8 +197,15 @@ class GameType(models.Model):
     # timestamp of creation time
     createdOn = models.DateTimeField(auto_now_add=True)
 
+    # module binary
+    type_module_bytes = models.BinaryField()
+
     def save(self, *args, **kwargs):
         if not self.createdOn:
+            # check if game type count exceeds desired maximum
+            if GameType.objects.filter(creator=self.creator).count() > MAX_AUTHORED_GAMES:
+                raise TooManyGameTypesWarning
+
             # called on create
             self.createdOn = timezone.now()
 
@@ -182,7 +218,8 @@ class GameType(models.Model):
                 if gitUrl[-4:] != '.git':
                     raise ValidationError
             except ValidationError:
-                raise ValueError("provided url is invalid")
+                raise UrlInvalidError
+
             # try cloning
             try:
                 logger.info("Cloning {" + gt_id + "}...")
@@ -196,5 +233,18 @@ class GameType(models.Model):
             # TODO make it work with src/setup.py stuff
             # save
             module = import_module('cavoke_app.game_modules.' + gt_id)
-            game_type_dict[gt_id] = module
+            self.__game_module = module
+            w_bytes = pickle.dumps(module, HIGHEST_PROTOCOL)
+            self.type_module_bytes = w_bytes
         return super(GameType, self).save(*args, **kwargs)
+
+    def getGameModule(self):
+        """
+        Gets module from binary
+        :return: module
+        """
+        if self.__game_module is not None:
+            return self.__game_module
+        module = pickle.loads(self.type_module_bytes)
+        self.__game_module = module
+        return module

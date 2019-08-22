@@ -19,10 +19,11 @@ from rest_framework.response import Response
 from rest_framework.status import *
 
 from cavoke_server import db, notifyAdmin
-from .gamestorage import game_session_dict
 from .models import GameSession, GameType
 from .serializers import *
 from .errormessages import *
+from .exceptions import *
+from . import randomUUID
 
 logger = logging.getLogger(__name__)
 validator = URLValidator()
@@ -89,8 +90,6 @@ def run_with_limited_time(func: Callable, args: tuple):
 
     :param func: The function to run
     :param args: The functions args, given as tuple
-    :param kwargs: The functions keywords, given as dict
-    :param time: The time limit in seconds
     :return: True if the function ended successfully. False if it was terminated.
     """
     manager = multiprocessing.Manager()
@@ -100,7 +99,7 @@ def run_with_limited_time(func: Callable, args: tuple):
     p.join(TIMEOUT_FOR_GAME)
     if p.is_alive():
         p.terminate()
-        raise TimeoutError
+        raise ProcessTooSlowError
     return rdict['']
 
 
@@ -161,6 +160,8 @@ def newGameSession(request):
     gs = GameSession(game_type=GameType.objects.get(game_type_id=game_type_id), player_uid=uid)
     try:
         gs.save()
+    except TooManyGameSessionsWarning:
+        return error_response(MAX_GAME_SESSIONS, HTTP_400_BAD_REQUEST)
     except Exception as e:
         logger.error(str(e))
         return error_response("Error occurred when processing the input data.", HTTP_400_BAD_REQUEST)
@@ -187,17 +188,12 @@ def newGameType(request):
     # get query params
     data = parse(request.query_params)
     user = userByUID(uid)
-    try:
-        _uid = data['creator']
-        if _uid != uid:
-            return error_response(NOT_OWNER, HTTP_400_BAD_REQUEST)
-    except KeyError:
-        data['creator'] = uid
+    data['creator'] = uid
     data['creator_display_name'] = user.username
 
     # create game_type_id
     # .replace() because it will be the name of package in game_modules
-    data['game_type_id'] = uuid.uuid4().__str__().replace('-', '')
+    data['game_type_id'] = randomUUID()
 
     # create model
     gts = GameTypeSerializer(data=data)
@@ -213,7 +209,7 @@ def newGameType(request):
     user.save()
 
     # gen token for moderator
-    modtoken = uuid.uuid4().__str__()
+    modtoken = randomUUID()
 
     gameId = gt.game_type_id
     gitUrl = gt.git_url
@@ -403,16 +399,13 @@ def click(request):
     user = userByUID(uid)
     user.profile.lastPlayedOn = timezone.now()
 
-    # lock game for any other action with it
-    game_session_dict[gameId][1].acquire()
-
     # try clicking
     try:
-        response = run_with_limited_time(game_session_dict[gameId][0].clickUnitId, (unitClicked,))
+        response = run_with_limited_time(gs.getCavokeGame().clickUnitId, (unitClicked,))
     except cavoke.exceptions.UnitNotFoundError:
         # if unit wasn't found
         return error_response(UNIT_NOT_FOUND, HTTP_400_BAD_REQUEST)
-    except TimeoutError:
+    except ProcessTooSlowError:
         # in case of timeout
         return error_response(TIMEOUT_ERROR, HTTP_500_INTERNAL_SERVER_ERROR)
     except Exception as e:
@@ -420,9 +413,6 @@ def click(request):
         message = "Error occurred during game code execution: [" + str(e) + "]. Contact developer"
         logger.error(message)
         return error_response(message, HTTP_500_INTERNAL_SERVER_ERROR)
-    finally:
-        # unlock game for futher actions
-        game_session_dict[gameId][1].release()
 
     return ok_response({"game": response})
 
@@ -483,13 +473,10 @@ def getSession(request):
     user = userByUID(uid)
     user.profile.lastPlayedOn = timezone.now()
 
-    # lock game for any other action with it
-    game_session_dict[gameId][1].acquire()
-
     # try getting response from cavoke.Game
     try:
-        response = run_with_limited_time(game_session_dict[gameId][0].getResponse, ())
-    except TimeoutError:
+        response = run_with_limited_time(gs.getCavokeGame().getResponse, ())
+    except ProcessTooSlowError:
         # in case of timeout, but how?
         return error_response(TIMEOUT_ERROR, HTTP_500_INTERNAL_SERVER_ERROR)
     except Exception as e:
@@ -497,9 +484,6 @@ def getSession(request):
         message = "Error occurred during game code execution: [" + str(e) + "]. Contact the developer."
         logger.error(message)
         return error_response(message, HTTP_500_INTERNAL_SERVER_ERROR)
-    finally:
-        # unlock the Game
-        game_session_dict[gameId][1].release()
 
     return ok_response({"data": GameSessionSerializer(gs).data, "game": response})
 
@@ -513,3 +497,5 @@ def getTypes(request):
     :return: response
     """
     return ok_response({'game_types': GameTypeSerializer(GameType.objects.all(), many=True).data})
+
+# TODO delete game session

@@ -2,16 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad633672-21f5-4709-8705-38c0a1305709" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Alex.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/migrations/0009_gametype_creator_display_name.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cavoke_app/migrations/0010_auto_20190822_1713.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cavoke_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cavoke_server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/errormessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/errormessages.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/gamestorage.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/gamestorage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_server/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_server/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_server/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cavoke_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_server/settings.py" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,63 +42,16 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cavoke_app/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cavoke_app/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding>
-                <element signature="e#634#671#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cavoke_app/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="515" selection-start-line="515" selection-end-line="515" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cavoke_server/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -99,113 +60,18 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>anon</find>
-      <find>logging</find>
-      <find>profile__</find>
-      <find>_exist</find>
-      <find>fu</find>
-      <find>FireBaseUser</find>
-      <find>&quot;Not enough parameters&quot;</find>
-      <find>error_response</find>
-      <find>Serial</find>
-      <find>seriali</find>
-      <find>create(</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>NOT_ENOUGH_PARAMS</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/django.wsgi" />
-        <option value="$PROJECT_DIR$/cavoke/views.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/apps.py" />
-        <option value="$PROJECT_DIR$/cavoke_server/models.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/admin.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/view.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" />
-        <option value="$PROJECT_DIR$/cavoke_server/urls.py" />
-        <option value="$PROJECT_DIR$/cavoke_server/tasks.py" />
-        <option value="$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth/authentication.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/modules/hQGZDkTaw7UDy6PRv4KL/__init__.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/rest-api_2.http" />
-        <option value="$PROJECT_DIR$/cavoke_server/secret_settings.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/cavoke_server/secret/__init__.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/urls.py" />
-        <option value="$PROJECT_DIR$/cavoke_server/secret/secret_settings.py" />
-        <option value="$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth_cavoke/models.py" />
-        <option value="$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth_cavoke/authentication.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/config/default.conf" />
-        <option value="$PROJECT_DIR$/update.sh" />
-        <option value="$PROJECT_DIR$/cavoke_app/serializers.py" />
-        <option value="$PROJECT_DIR$/cavoke_server/settings.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/errormessages.py" />
-        <option value="$PROJECT_DIR$/LICENSE" />
-        <option value="$PROJECT_DIR$/cavoke_app/gamestorage.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/models.py" />
-        <option value="$PROJECT_DIR$/cavoke_app/views.py" />
-        <option value="$PROJECT_DIR$/cavoke_server/views.py" />
-        <option value="$PROJECT_DIR$/cavoke_server/__init__.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1025" />
-    <option name="y" value="20" />
-    <option name="width" value="855" />
-    <option name="height" value="1105" />
-  </component>
+  <component name="ProjectId" id="1PeYjuGeG6Y4FrTkikQ1Idli8oF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cavoke_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cavoke_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
-              <item name="cavoke_app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cavoke_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
-              <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cavoke_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cavoke_server" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/db.sqlite3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -227,6 +93,290 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/v1/newGameType" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDgzNTQxLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0ODM1NDEsImV4cCI6MTU2NjQ4NzE0MSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.u3yAzJiIGKdpzUiLeuiQF0T-EDUVXwZtjZ_yDRKWD25A8_-WKSFykmf4SEkb4lDUif72eYSfjfuq42M0pYcJ18FVDjok1Zo70IvMERK4tMjHeHP3vDBiQ2ngxzntL-wgY7It-vyIB1GzJcyOor8IjLhFgH5v-cg-5wNfY84myr0iokWm5NC3P1ys4N_bmD-6Br0z-nsIaX8iO-gizqXwmopEFbuwRgSQMS24k4Kosa9s11hKFnuMxFIbDQ_NeAkz9QGe1Z1NhNe6juaY6GGgPAmPHtswY43xyAVNwo42eMuXWNFEdFFp4lVlIFGmE7RSFMbXrvJ0ZZa325u0iLUxfQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="sosiska" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="git_url" />
+                <option name="value" value="https://github.com/cavoke-project/cavoke-lib-example.git" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newGameType" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDgzNTQxLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0ODM1NDEsImV4cCI6MTU2NjQ4NzE0MSwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.u3yAzJiIGKdpzUiLeuiQF0T-EDUVXwZtjZ_yDRKWD25A8_-WKSFykmf4SEkb4lDUif72eYSfjfuq42M0pYcJ18FVDjok1Zo70IvMERK4tMjHeHP3vDBiQ2ngxzntL-wgY7It-vyIB1GzJcyOor8IjLhFgH5v-cg-5wNfY84myr0iokWm5NC3P1ys4N_bmD-6Br0z-nsIaX8iO-gizqXwmopEFbuwRgSQMS24k4Kosa9s11hKFnuMxFIbDQ_NeAkz9QGe1Z1NhNe6juaY6GGgPAmPHtswY43xyAVNwo42eMuXWNFEdFFp4lVlIFGmE7RSFMbXrvJ0ZZa325u0iLUxfQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="sosiska" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="git_url" />
+                <option name="value" value="https://github.com/cavoke-project/cavoke-lib-example.git" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newSession" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDY4ODQwLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0Njg4NDAsImV4cCI6MTU2NjQ3MjQ0MCwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.cG7mfz1ohAB5nn6IEsflKV-w5joElBkc9WDhIycJa6U1YRX_OnAEGWA7he9J7Zno-liwX6xA2RZBH58an1pmPmwAguarDZuqcFmJZLF2dZFNMrewh_KNi_fO4G_ILlO2ciPkCgWcOSwOekIdoWOQFL4HXLDMrz1MzaV-oZn96Uo1nJKFAio7-ZJNr4IIC0WaQXPzmx32PRSYvpc_89UvuYJwFh87GHStCb4fSc6FD8YI0oAbF-9-4Qu1bMCmP88EmmT6qS8FZhrvWSr0Y8Pt7tH23GdtKJnI4Wo0uNZJMXFT-X6x3lJ3lIzvcYSld2rD65O0vaQ7L9C4srF7vWGbYQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_type_id" />
+                <option name="value" value="18a2fcf092d647098300cee10b57ecd7" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newGameSession" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDY4ODQwLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0Njg4NDAsImV4cCI6MTU2NjQ3MjQ0MCwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.cG7mfz1ohAB5nn6IEsflKV-w5joElBkc9WDhIycJa6U1YRX_OnAEGWA7he9J7Zno-liwX6xA2RZBH58an1pmPmwAguarDZuqcFmJZLF2dZFNMrewh_KNi_fO4G_ILlO2ciPkCgWcOSwOekIdoWOQFL4HXLDMrz1MzaV-oZn96Uo1nJKFAio7-ZJNr4IIC0WaQXPzmx32PRSYvpc_89UvuYJwFh87GHStCb4fSc6FD8YI0oAbF-9-4Qu1bMCmP88EmmT6qS8FZhrvWSr0Y8Pt7tH23GdtKJnI4Wo0uNZJMXFT-X6x3lJ3lIzvcYSld2rD65O0vaQ7L9C4srF7vWGbYQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_type_id" />
+                <option name="value" value="18a2fcf092d647098300cee10b57ecd7" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newGameType" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDY4ODQwLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0Njg4NDAsImV4cCI6MTU2NjQ3MjQ0MCwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.cG7mfz1ohAB5nn6IEsflKV-w5joElBkc9WDhIycJa6U1YRX_OnAEGWA7he9J7Zno-liwX6xA2RZBH58an1pmPmwAguarDZuqcFmJZLF2dZFNMrewh_KNi_fO4G_ILlO2ciPkCgWcOSwOekIdoWOQFL4HXLDMrz1MzaV-oZn96Uo1nJKFAio7-ZJNr4IIC0WaQXPzmx32PRSYvpc_89UvuYJwFh87GHStCb4fSc6FD8YI0oAbF-9-4Qu1bMCmP88EmmT6qS8FZhrvWSr0Y8Pt7tH23GdtKJnI4Wo0uNZJMXFT-X6x3lJ3lIzvcYSld2rD65O0vaQ7L9C4srF7vWGbYQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_type_id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="sosiska" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="creator" />
+                <option name="value" value="waleko" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="git_url" />
+                <option name="value" value="https://github.com/cavoke-project/cavoke-lib-example.git" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="creator_display_name" />
+                <option name="value" value="debil" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newGameType" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjI2OGNhNTBjZTY0YjQxYWIzNGZhMDM1NzIwMmQ5ZTk0ZTcyYmQ2ZWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTY2NDY4ODQwLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjY0Njg4NDAsImV4cCI6MTU2NjQ3MjQ0MCwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.cG7mfz1ohAB5nn6IEsflKV-w5joElBkc9WDhIycJa6U1YRX_OnAEGWA7he9J7Zno-liwX6xA2RZBH58an1pmPmwAguarDZuqcFmJZLF2dZFNMrewh_KNi_fO4G_ILlO2ciPkCgWcOSwOekIdoWOQFL4HXLDMrz1MzaV-oZn96Uo1nJKFAio7-ZJNr4IIC0WaQXPzmx32PRSYvpc_89UvuYJwFh87GHStCb4fSc6FD8YI0oAbF-9-4Qu1bMCmP88EmmT6qS8FZhrvWSr0Y8Pt7tH23GdtKJnI4Wo0uNZJMXFT-X6x3lJ3lIzvcYSld2rD65O0vaQ7L9C4srF7vWGbYQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_type_id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="sosiska" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="creator" />
+                <option name="value" value="waleko" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="git_url" />
+                <option name="value" value="down" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="creator_display_name" />
+                <option name="value" value="debil" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/v1/newGameType" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization1" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwZTQxMjczMzMwYTg2ZmRjMjhlMjgzMDVhNDRkYzlhODgzZTI2YTciLCJ0eXAiOiJKV1QifQ.eyJwcm92aWRlcl9pZCI6ImFub255bW91cyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jYXZva2UtZmlyZWJhc2UiLCJhdWQiOiJjYXZva2UtZmlyZWJhc2UiLCJhdXRoX3RpbWUiOjE1NjM0NDE2NzYsInVzZXJfaWQiOiJoN05nOVJQZU1MVVE5aHRwd2VPNmd2Qmk0d0wyIiwic3ViIjoiaDdOZzlSUGVNTFVROWh0cHdlTzZndkJpNHdMMiIsImlhdCI6MTU2MzQ0MTY3NiwiZXhwIjoxNTYzNDQ1Mjc2LCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7fSwic2lnbl9pbl9wcm92aWRlciI6ImFub255bW91cyJ9fQ.Didc09xMBSMr3ja2p1U2XGO-nIkAXw_n2ykQ6_30Iin2-FV2WLfv3jk3119R2UCB0jUaoRc16_Zpsb6p3mXFQIlmigRRFX3FQVQrj7l4vyw81MQvNan7Q4NNrdKSYQx9g3mjy31RFwSeQNZAWv-kb30ccZ3_-mxtzrLMrA9dNzWSbwLI3LXy8QxntV_Ai08TLt_uPN4m4n2CiOhXG0dXEHDcLgqzxVoodMUgHxX9wHy4pj0QOVEr2c5cZ8iQGfwZ8P8hx1zbYniFlM6cAgv-MWkiioAGJhhJ_3raskMHOOtrHaNoP7oLQRhj9Rra69V_BS0PuHy_J2-A2HtgG8k8mg" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="JWT eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ2YjgzOTdjOGU0NmE3M2ZiMDExMDk2YjUyMDE1YTZlNjZkMDMyZWIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2F2b2tlLWZpcmViYXNlIiwiYXVkIjoiY2F2b2tlLWZpcmViYXNlIiwiYXV0aF90aW1lIjoxNTYzNjIxMTQwLCJ1c2VyX2lkIjoia2ZLNXpwRlJIS2I2U0hPRGZsSzJvZ2pVdEMyMyIsInN1YiI6ImtmSzV6cEZSSEtiNlNIT0RmbEsyb2dqVXRDMjMiLCJpYXQiOjE1NjM2MjExNDAsImV4cCI6MTU2MzYyNDc0MCwiZW1haWwiOiJ0ZXN0MUBhbGV4a292cmlnaW4ubWUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdDFAYWxleGtvdnJpZ2luLm1lIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.sLBbyg4hoPTFhNxX8ZV2kZQ7lnoSdq8OZmaWI546J3VD5Cx1-faI3m1J3JXbc9Xo80ssqTUoNI2fosymCpORbwrYpGZwqlVFgftM4rLFcWXFU5h-KY0PYI0CPc0VfLQJk-C4rDyFe4k3VdAuY8j9GNNveVtg43MODEa2apiUEKqinZaRpUHDL-2pRFyzXhjQ2aMI13sqdv3B6oIi55MCTSzkEV9DidukN8CxC7AmAM8AitrszjXfU1LcgKMVpxdqdNNhy-ECvNQMBDZkgXXwXNJJGRR9XVgO4Y96SR436OFDBqh5w1c2zpOB0q4mqblEojFJXmDPVVsS4EOaf3zCiA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="game_type_id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="sosiska" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="creator" />
+                <option name="value" value="waleko" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="git_url" />
+                <option name="value" value="down" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="creator_display_name" />
+                <option name="value" value="debil" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8000" />
@@ -1169,7 +1319,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.cavoke_server">
+  <component name="RunManager" selected="HTTP Request.rest-api#1">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
       <method v="2" />
     </configuration>
@@ -1205,9 +1355,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api_2#1" />
         <item itemvalue="HTTP Request.rest-api_1#1" />
-        <item itemvalue="HTTP Request.rest-api#1" />
       </list>
     </recent_temporary>
   </component>
@@ -1264,11 +1414,12 @@
       <workItem from="1564210391754" duration="14000" />
       <workItem from="1564497029819" duration="1582000" />
       <workItem from="1564586132661" duration="2466000" />
+      <workItem from="1566236194831" duration="693000" />
+      <workItem from="1566237525654" duration="948000" />
+      <workItem from="1566465250703" duration="10044000" />
+      <workItem from="1566490104112" duration="599000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1279,497 +1430,51 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.23190348" />
-      <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.28619304" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41301274" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40452617" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="manage.py@cavoke_server" order="10" weight="0.3281471" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.39179632" />
-      <window_info anchor="bottom" id="REST Client" order="14" weight="0.55021214" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3297587" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.27882037" />
-      <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.28619304" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41301274" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40452617" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="manage.py@cavoke_server" order="10" weight="0.3281471" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.39179632" />
-      <window_info anchor="bottom" id="REST Client" order="14" weight="0.55021214" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3297587" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>153</line>
-          <option name="timeStamp" value="18" />
+          <line>272</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>302</line>
-          <option name="timeStamp" value="28" />
+          <line>257</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>296</line>
-          <option name="timeStamp" value="29" />
+          <line>150</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>284</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/cavoke_app/views.py</url>
-          <line>183</line>
-          <option name="timeStamp" value="31" />
+          <url>file://$PROJECT_DIR$/cavoke_app/models.py</url>
+          <line>235</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
-        <watch expression="gts" language="Python" />
-        <watch expression="gts.is_valid()" language="Python" />
-        <watch expression="gts.object" language="Python" />
-        <watch expression="gts.errors" language="Python" />
-        <watch expression="gts.instance" language="Python" />
-        <watch expression="serializer.create()" language="Python" />
-        <watch expression="FirebaseUser.objects.get(uid=uid)" language="Python" />
+        <watch expression="GameSession.objects.all()" language="Python" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>FirebaseUser.objects.get(uid=uid)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>serializer.create()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>gts.errors</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>gts.object</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>gts.instance</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>gts.is_valid()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>gts</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>FirebaseUser.objects.filter()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>User.objects.get()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="382" selection-start-line="382" selection-end-line="382" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="864" selection-start-line="864" selection-end-line="864" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/socketserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="716" selection-start-line="716" selection-end-line="716" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/servers/basehttp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/uuid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="171" selection-start-line="171" selection-end-line="171" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/pathlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="1152" column="12" selection-start-line="1152" selection-start-column="12" selection-end-line="1152" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/firebase_admin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="140" column="25" lean-forward="true" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/firebase_admin/_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/modules/hQGZDkTaw7UDy6PRv4KL/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="514" column="26" lean-forward="true" selection-start-line="514" selection-start-column="26" selection-end-line="514" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth/authentication.py" />
-    <entry file="file://$PROJECT_DIR$/db.sqlite3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="135" column="4095" selection-start-line="135" selection-start-column="4095" selection-end-line="135" selection-end-column="4095" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a825976c-e9fb-4225-8e2c-e6c90178f85a/collation/NOCASE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://a825976c-e9fb-4225-8e2c-e6c90178f85a/collation/RTRIM">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://a825976c-e9fb-4225-8e2c-e6c90178f85a/collation/BINARY">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a825976c-e9fb-4225-8e2c-e6c90178f85a/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_2.http">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" selection-start-column="52" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/secret/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/firebase_admin/credentials.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/secret/secret_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth_cavoke/authentication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="229" column="32" lean-forward="true" selection-end-line="263" />
-          <folding>
-            <element signature="e#294#305#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/drf_firebase_auth_cavoke/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/google/cloud/firestore_v1/transforms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="81" column="6" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="494" selection-start-line="494" selection-end-line="494" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/update.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/errormessages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/gamestorage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="198" column="42" lean-forward="true" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#634#671#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#637#674#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="515" selection-start-line="515" selection-end-line="515" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cavoke_server/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
