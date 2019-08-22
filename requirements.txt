@@ -5,3 +5,4 @@ cavoke
 django-logentry-admin
 mysqlclient
 drf-firebase-auth-cavoke
+eventlet

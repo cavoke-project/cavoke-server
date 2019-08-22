@@ -18,11 +18,6 @@ class UrlInvalidError(BaseCavokeError):
     pass
 
 
-class ProcessTooSlowError(BaseCavokeError):
-    # Raised when cavoke game takes too long to process
-    pass
-
-
 class TooManyGameTypesWarning(BaseCavokeWarning):
     # Raised when user has authored too many games
     pass

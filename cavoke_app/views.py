@@ -28,7 +28,6 @@ from .config import *
 logger = logging.getLogger(__name__)
 validator = URLValidator()
 
-# API methods
 
 @api_view(["GET"])
 @authentication_classes(())
@@ -123,7 +122,7 @@ def newGameType(request):
     except ValidationError:
         return error_response(WRONG_URL, HTTP_400_BAD_REQUEST)
 
-    # prepare dict with gametype info
+    # prepare dict with game type info
     rdict = GameTypeSerializer(gt).data
 
     # INFO we do this as gt.save() wasn't called yet and createdOn isn't initialized
@@ -306,7 +305,7 @@ def click(request):
     except cavoke.exceptions.UnitNotFoundError:
         # if unit wasn't found
         return error_response(UNIT_NOT_FOUND, HTTP_400_BAD_REQUEST)
-    except ProcessTooSlowError:
+    except TimeoutError:
         # in case of timeout
         return error_response(TIMEOUT_ERROR, HTTP_500_INTERNAL_SERVER_ERROR)
     except Exception as e:
@@ -377,7 +376,7 @@ def getSession(request):
     # try getting response from cavoke.Game
     try:
         response = run_with_limited_time(gs.getCavokeGame().getResponse, ())
-    except ProcessTooSlowError:
+    except TimeoutError:
         # in case of timeout, but how?
         return error_response(TIMEOUT_ERROR, HTTP_500_INTERNAL_SERVER_ERROR)
     except Exception as e:

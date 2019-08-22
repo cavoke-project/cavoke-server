@@ -3,6 +3,7 @@ import multiprocessing
 import uuid
 from multiprocessing import Process
 from typing import Callable
+import eventlet
 
 import cavoke.exceptions
 from django.contrib.auth.models import User
@@ -44,6 +45,9 @@ GAME_TYPES_FOLDER = "./cavoke_app/game_modules/"
 Timeout for cavoke game session in seconds
 """
 TIMEOUT_FOR_GAME = 10
+
+
+# eventlet.monkey_patch()
 
 def randomUUID():
     return uuid.uuid4().__str__().replace('-', '')
@@ -92,18 +96,6 @@ def userByUID(uid: str) -> User:
     return user
 
 
-def _ltrun(f: Callable, args: tuple, return_dict: dict) -> None:
-    """
-    Additional function for run_with_limited_time.
-    :param f: function
-    :param args: arguments for function
-    :param return_dict: dict data to be returned in
-    """
-    r = f(*args)
-    return_dict[''] = r
-    print('done!')
-
-
 def run_with_limited_time(func: Callable, args: tuple):
     """Runs a function with time limit
 
@@ -111,15 +103,10 @@ def run_with_limited_time(func: Callable, args: tuple):
     :param args: The functions args, given as tuple
     :return: True if the function ended successfully. False if it was terminated.
     """
-    manager = multiprocessing.Manager()
-    rdict = manager.dict()
-    p = Process(target=_ltrun, args=(func, args, rdict), kwargs={})
-    p.start()
-    p.join(TIMEOUT_FOR_GAME)
-    if p.is_alive():
-        p.terminate()
-        raise ProcessTooSlowError
-    return rdict['']
+    timeout = eventlet.Timeout(TIMEOUT_FOR_GAME, TimeoutError)
+    r = func(*args)
+    timeout.cancel()
+    return r
 
 
 def isAnonymous(uid: str) -> bool:
