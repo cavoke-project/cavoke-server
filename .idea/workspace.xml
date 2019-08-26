@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad633672-21f5-4709-8705-38c0a1305709" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cavoke_app/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/exceptions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cavoke_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cavoke_server/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
@@ -51,9 +51,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response89.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1PeYjuGeG6Y4FrTkikQ1Idli8oF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -1642,7 +1639,11 @@
       <workItem from="1566237525654" duration="948000" />
       <workItem from="1566465250703" duration="10044000" />
       <workItem from="1566490104112" duration="5044000" />
-      <workItem from="1566498311918" duration="1383000" />
+      <workItem from="1566498311918" duration="2028000" />
+      <workItem from="1566557484853" duration="5430000" />
+      <workItem from="1566633804006" duration="1002000" />
+      <workItem from="1566664513826" duration="2128000" />
+      <workItem from="1566677605364" duration="167000" />
     </task>
     <servers />
   </component>

@@ -190,8 +190,6 @@ def approveGame(request):
     # get uid
     uid = gdict['creator']
 
-    gdict.pop('modtoken')
-
     # save game type to database
     serializer = GameTypeSerializer(data=gdict)
     if not serializer.is_valid():
@@ -199,9 +197,10 @@ def approveGame(request):
     serializer.save()
 
     # save stats for user
+    gdict.pop('modtoken')
     db.collection('pending_games').document(game_type_id).delete()
-    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([game_type_id])})
-    db.collection('users').document(uid).update({u'authored_games': ArrayUnion([game_type_id])})
+    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([gdict])})
+    db.collection('users').document(uid).update({u'authored_games': ArrayUnion([gdict])})
 
     return ok_response(gdict)
 
@@ -236,7 +235,7 @@ def declineGame(request):
 
     # save stats
     db.collection('pending_games').document(game_type_id).delete()
-    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([game_type_id])})
+    db.collection('users').document(uid).update({u'pending_games': ArrayRemove([gdict])})
 
     # free up the slot for game
     # TODO make atomic

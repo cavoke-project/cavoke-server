@@ -49,6 +49,12 @@ TIMEOUT_FOR_GAME = 10
 
 # eventlet.monkey_patch()
 
+headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type": "application/json"
+}
+
+
 def randomUUID():
     return uuid.uuid4().__str__().replace('-', '')
 
@@ -60,7 +66,7 @@ def error_response(message: str, error_code) -> Response:
     :param error_code: http error code as rest_framework.status
     :return: response
     """
-    return Response({"status": "Error", "message": message}, error_code)
+    return Response({"status": "Error", "message": message}, error_code, headers=headers)
 
 
 def ok_response(answer: dict = {}) -> Response:
@@ -69,7 +75,7 @@ def ok_response(answer: dict = {}) -> Response:
     :param answer: data for client
     :return: response
     """
-    return Response({"status": "OK", "response": answer}, HTTP_200_OK)
+    return Response({"status": "OK", "response": answer}, HTTP_200_OK, headers=headers)
 
 
 def tryGetListFromDict(d: dict, key: str):

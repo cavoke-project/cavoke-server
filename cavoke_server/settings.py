@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'drf_firebase_auth_cavoke',
     'cavoke',
     'logentry_admin',
-    'eventlet'
+    'eventlet',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -148,3 +150,5 @@ DRF_FIREBASE_AUTH_CAVOKE = {
     'FIREBASE_SERVICE_ACCOUNT_KEY': os.path.join(SECRET_PATH, FIREBASE_JSON_FILE),
     'FIREBASE_ATTEMPT_CREATE_WITH_DISPLAY_NAME': False
 }
+
+CORS_ORIGIN_ALLOW_ALL = True

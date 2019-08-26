@@ -2,6 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cavoke_app/game_modules/18a2fcf092d647098300cee10b57ecd7" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cavoke_app/game_modules/43e23aef511f48dbaa02e069ba0efc4b" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cavoke_app/game_modules/8b616e41f634496e83ae2a7fff4dbb01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cavoke_app/game_modules/e180247fc1d44e639e4e6efc1f4e1af6" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cavoke_app/game_modules/hQGZDkTaw7UDy6PRv4KL" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cavoke_app/modules/hQGZDkTaw7UDy6PRv4KL" vcs="Git" />
   </component>
