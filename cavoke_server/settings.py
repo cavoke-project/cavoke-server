@@ -26,7 +26,9 @@ from cavoke_server.secret.secret_settings import SECRET_KEY, PRODUCTION_DB, FIRE
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+PRODUCTION = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'api.cavoke.alexkovrigin.me']
 
@@ -85,7 +87,7 @@ WSGI_APPLICATION = 'cavoke_server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-if DEBUG:
+if PRODUCTION:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -148,7 +150,8 @@ REST_FRAMEWORK = {
 
 DRF_FIREBASE_AUTH_CAVOKE = {
     'FIREBASE_SERVICE_ACCOUNT_KEY': os.path.join(SECRET_PATH, FIREBASE_JSON_FILE),
-    'FIREBASE_ATTEMPT_CREATE_WITH_DISPLAY_NAME': False
+    'FIREBASE_ATTEMPT_CREATE_WITH_DISPLAY_NAME': False,
+    'FIREBASE_AUTH_EMAIL_VERIFICATION': True,
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
